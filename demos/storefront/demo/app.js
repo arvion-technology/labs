@@ -65,6 +65,7 @@ const ICONS = {
   bag: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>',
   check: '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4.5 4.5L19 6.5"/></svg>',
   arrow: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>',
+  search: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>',
 };
 
 const DEFAULT_CHECKOUT = {
@@ -337,10 +338,12 @@ function topbar() {
   );
 
   if (state.route.name === "shop") {
+    bar.append(el("span", { class: "bar-note", text: "Free delivery over Rs 2,500" }));
     bar.append(
       el(
         "div",
         { class: "shop-search" },
+        el("span", { class: "search-ico", html: ICONS.search }),
         el("input", {
           class: "input",
           id: "shop-search",

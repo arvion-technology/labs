@@ -113,10 +113,19 @@ body.cart-open {
   color: var(--gold);
 }
 
+.bar-note {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
 .shop-search {
+  position: relative;
   flex: 0 1 380px;
   max-width: 380px;
-  margin-left: auto;
+  margin-left: 16px;
 }
 
 .shop-search .input {
@@ -124,29 +133,15 @@ body.cart-open {
   padding-left: 36px;
 }
 
-.shop-search::before {
-  content: "";
-  left: 14px;
-  top: 15px;
-  width: 11px;
-  height: 11px;
-  border: 1.6px solid var(--muted);
-  border-radius: 50%;
-  transform: none;
-  opacity: 0.8;
-}
-
-.shop-search::after {
-  content: "";
+.search-ico {
   position: absolute;
-  left: 23px;
-  top: 25px;
-  width: 6px;
-  height: 1.6px;
-  border-radius: 2px;
-  background: var(--muted);
-  transform: rotate(45deg);
-  opacity: 0.8;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  color: var(--muted);
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .shop-actions {
@@ -2071,6 +2066,16 @@ label.field.invalid .select {
   }
 }
 
+@media (max-width: 1140px) {
+  .bar-note {
+    display: none;
+  }
+
+  .shop-search {
+    margin-left: auto;
+  }
+}
+
 @media (max-width: 1080px) {
   .shop-hero {
     grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
@@ -2105,7 +2110,8 @@ label.field.invalid .select {
 
 @media (max-width: 900px) {
   .shop-nav,
-  .shop-search {
+  .shop-search,
+  .bar-note {
     display: none;
   }
 
