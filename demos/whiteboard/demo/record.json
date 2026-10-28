@@ -1,0 +1,16 @@
+[
+  { "wait": 900 },
+  { "click": "[data-tool=\"rect\"]" },
+  { "drag": [430, 620, 590, 710] },
+  { "click": "[data-tool=\"sticky\"]" },
+  { "drag": [640, 620, 780, 720] },
+  { "click": "[data-tool=\"select\"]" },
+  { "drag": [230, 540, 330, 575] },
+  { "drag": [300, 390, 350, 430] },
+  { "click": "#undo" },
+  { "click": "[data-tool=\"ellipse\"]" },
+  { "drag": [880, 620, 1000, 700] },
+  { "click": "[data-tool=\"select\"]" },
+  { "click": "#zoom-fit" },
+  { "wait": 900 }
+]
