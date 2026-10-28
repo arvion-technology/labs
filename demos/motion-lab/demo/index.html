@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motion Lab — copy-paste CSS animation recipes</title>
+  <meta name="description" content="Twenty-two production-ready CSS and Web Animations recipes with live controls, copyable code and reduced-motion fallbacks." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0f1a'/><text x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%23f5c26b' text-anchor='middle'>M</text></svg>" />
+  <link rel="stylesheet" href="arvion.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="grid-lines"></div>
+
+  <div class="app lab-app">
+    <header class="topbar lab-topbar">
+      <a class="brand" href="#/">
+        <span class="brand-mark">M</span>
+        <span>
+          <span class="brand-word">ARVION <b>/</b> MOTION LAB</span>
+          <span class="brand-sub" style="display:block">22 recipes · reduced-motion aware</span>
+        </span>
+      </a>
+      <nav class="lab-nav" aria-label="Motion Lab">
+        <a href="#/" data-nav="gallery">Gallery</a>
+        <a href="#/playground" data-nav="playground">Playground</a>
+      </nav>
+      <span class="spacer"></span>
+      <span class="badge green"><span class="dot pulse"></span> 22 / 22 reduced-motion fallbacks</span>
+      <a class="btn sm" href="https://github.com/arvion-technology/motion-lab" target="_blank" rel="noopener">GitHub ↗</a>
+    </header>
+
+    <main class="lab-main" id="view">
+      <noscript>
+        <div class="card"><p class="mb-0">Motion Lab renders every preview from the recipe registry in <span class="mono">src/recipes.js</span>. Enable JavaScript to see the live demos.</p></div>
+      </noscript>
+    </main>
+  </div>
+
+  <div class="demo-banner">
+    <span class="brand-mark" style="width:20px;height:20px;font-size:10px;border-radius:6px">A</span>
+    <span>Arvion Labs</span>
+    <span class="sep"></span>
+    <a href="https://arvion-technology.github.io/labs/">All projects</a>
+    <span class="sep"></span>
+    <a href="https://github.com/arvion-technology/motion-lab" target="_blank" rel="noopener">source</a>
+  </div>
+
+  <script src="arvion.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

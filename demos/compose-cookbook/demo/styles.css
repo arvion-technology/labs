@@ -1,0 +1,89 @@
+/* Compose Cookbook catalog: stack list left, detail middle, validation right. */
+
+body { overflow: hidden; }
+
+.catalog-app { display: grid; grid-template-rows: 64px minmax(0, 1fr); height: 100vh; }
+
+.catalog-top {
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 22px; border-bottom: 1px solid var(--line);
+  background: rgba(11, 15, 26, 0.82); backdrop-filter: blur(8px); z-index: 5;
+}
+
+.catalog-body { display: grid; grid-template-columns: 236px minmax(0, 1fr) 326px; min-height: 0; }
+
+.stack-rail {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 18px 12px 20px; border-right: 1px solid var(--line);
+  background: rgba(13, 18, 30, 0.55); overflow-y: auto;
+}
+
+.stack-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 9px; border-radius: 8px; font-size: 12.5px; color: var(--text-2);
+  cursor: pointer; border: 1px solid transparent;
+}
+.stack-item:hover { background: var(--surface-2); }
+.stack-item.active { background: var(--surface-3); border-color: var(--line-strong); color: var(--text); }
+.stack-item .num { font-family: var(--font-mono); font-size: 10px; color: var(--muted); width: 16px; }
+.stack-item .n { margin-left: auto; font-size: 10px; color: var(--muted); font-family: var(--font-mono); }
+.stack-item.active .n { color: var(--gold); }
+
+.side-note { border: 1px solid var(--line); background: var(--surface-2); border-radius: var(--radius-sm); padding: 11px 12px; }
+
+.stack-main { min-width: 0; min-height: 0; overflow-y: auto; padding: 18px 22px 30px; }
+.stack-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 8px; }
+.stack-head h1 { font-size: 26px; margin: 2px 0 0; }
+
+.topo-card { margin-bottom: 13px; }
+.topology { display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap; }
+.svc-node {
+  flex: 1 1 160px; min-width: 150px; max-width: 240px;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--surface-2); padding: 9px 11px;
+}
+.svc-node .svc-name { font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+.svc-node .svc-image { font-family: var(--font-mono); font-size: 9.5px; color: var(--muted); margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.svc-node .svc-meta { display: flex; gap: 8px; margin-top: 6px; font-size: 9.5px; color: var(--muted); }
+.svc-node .dot { width: 6px; height: 6px; }
+.topo-link { display: grid; place-items: center; color: var(--muted); font-size: 13px; padding: 0 1px; }
+
+.code-card { padding: 15px; }
+.files { display: flex; gap: 4px; }
+.files .tab { padding: 5px 10px; font-size: 11.5px; }
+pre.yaml {
+  margin: 0; padding: 14px 16px; max-height: 360px; overflow: auto;
+  background: #070a11; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  color: #c6d2e6; font-family: var(--font-mono); font-size: 11px; line-height: 1.55;
+  tab-size: 2; white-space: pre;
+}
+
+.check-rail {
+  border-left: 1px solid var(--line);
+  padding: 16px 14px 24px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 13px;
+  background: rgba(13, 18, 30, 0.55);
+}
+
+.checks { display: flex; flex-direction: column; gap: 7px; }
+.check-row { display: flex; align-items: center; gap: 8px; font-size: 11.5px; color: var(--text-2); }
+.check-mark {
+  width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 9px; font-weight: 700; flex: none;
+  background: var(--green-soft); color: var(--green); border: 1px solid rgba(52, 211, 153, 0.3);
+}
+.check-row.warn .check-mark { background: var(--gold-soft); color: var(--gold); border-color: var(--gold-line); }
+.check-row.fail .check-mark { background: var(--red-soft); color: var(--red); border-color: rgba(248, 113, 113, 0.3); }
+.check-row .rule { margin-left: auto; font-family: var(--font-mono); font-size: 9px; color: var(--muted); }
+
+.env-row { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+.env-row code { font-family: var(--font-mono); color: var(--gold); font-size: 10.5px; }
+.env-row .val { margin-left: auto; color: var(--muted); font-family: var(--font-mono); font-size: 9.5px; max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.run-block code { display: block; font-family: var(--font-mono); font-size: 10.5px; color: var(--text-2); padding: 3px 0; }
+.run-block code::before { content: "$ "; color: var(--muted); }
+
+@media (max-width: 1180px) {
+  .catalog-body { grid-template-columns: 210px minmax(0, 1fr); }
+  .check-rail { display: none; }
+}

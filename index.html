@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arvion Labs — open-source engineering from Kathmandu</title>
+<meta name="description" content="Runnable open-source projects from Arvion Technologies: analytics, invoicing, helpdesk, booking, AI tooling, developer tools, cloud blueprints and mobile case studies. Every demo runs in your browser." />
+<meta name="color-scheme" content="dark" />
+<meta property="og:title" content="Arvion Labs — open-source engineering from Kathmandu" />
+<meta property="og:description" content="30 runnable projects: product apps, developer tools and infrastructure, all with live demos." />
+<meta property="og:image" content="assets/pulse.png" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0f1a'/><text x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='%23f5c26b' text-anchor='middle'>A</text></svg>" />
+<link rel="stylesheet" href="labs.css" />
+</head>
+<body>
+<div class="aurora"></div>
+<div class="grid-lines"></div>
+
+<header class="nav">
+  <a class="brand" href="./">
+    <img class="brand-logo" src="assets/logo-mark-gold.png" alt="Arvion" />
+    <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
+  </a>
+  <span class="spacer"></span>
+  <a class="nav-link" href="#projects">Projects</a>
+  <a class="nav-link" href="#work">Client work</a>
+  <a class="nav-link" href="#about">About</a>
+  <a class="btn sm primary" href="https://arviontech.net" target="_blank" rel="noopener">arviontech.net ↗</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Arvion Technologies · Kathmandu</div>
+      <h1>Open-source work from a product engineering studio.</h1>
+      <p>30 runnable projects across product SaaS, AI tooling, developer tools, cloud infrastructure and mobile. No sign-ups, no API keys — open a demo and click around. The source is on GitHub, tests included.</p>
+      <div class="row wrap hero-actions">
+        <a class="btn primary lg" href="#projects">Browse the projects</a>
+        <a class="btn lg" href="https://github.com/arvion-technology" target="_blank" rel="noopener">GitHub organisation</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Projects</div><div class="stat-value gold">30</div></div>
+        <div class="stat"><div class="stat-label">Flagship builds</div><div class="stat-value">6</div></div>
+        <div class="stat"><div class="stat-label">Live demos</div><div class="stat-value">30</div></div>
+        <div class="stat"><div class="stat-label">License</div><div class="stat-value" style="font-size:22px">MIT</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="window">
+        <div class="window-bar"><i></i><i></i><i></i><span>Pulse — live demo</span></div>
+        <a href="demos/pulse/demo/"><img src="assets/pulse.gif" alt="Pulse demo" /></a>
+      </div>
+      <div class="hero-note">Every screenshot on this page is generated from the code in the repository.</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The work</div>
+        <h2>Projects</h2>
+      </div>
+      <span class="spacer"></span>
+      <div class="search"><input id="filter-input" class="input" type="search" placeholder="Filter by name, stack, category…" aria-label="Filter projects" /></div>
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="SaaS">SaaS</button><button class="filter" data-filter="AI &amp; data">AI &amp; data</button><button class="filter" data-filter="Developer tools">Developer tools</button><button class="filter" data-filter="Cloud &amp; DevOps">Cloud &amp; DevOps</button><button class="filter" data-filter="Design &amp; frontend">Design &amp; frontend</button><button class="filter" data-filter="Mobile">Mobile</button>
+    </div>
+    <div class="project-grid" id="project-grid">
+
+      <article class="project-card" data-category="SaaS" data-search="pulse self-hosted product analytics with funnels, retention and cohorts typescript vanilla js svg analytics / saas">
+        <a class="shot" href="demos/pulse/demo/" aria-label="Pulse live demo">
+          <img src="assets/pulse.png" data-gif="assets/pulse.gif" alt="Pulse — Self-hosted product analytics with funnels, retention and cohorts" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Pulse</h3>
+            <span class="spacer"></span>
+            <span class="project-num">01</span>
+          </div>
+          <p class="project-tagline">Self-hosted product analytics with funnels, retention and cohorts</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span><span class="chip">SVG</span></div>
+          <div class="row project-links">
+            <a href="demos/pulse/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/pulse" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="invoiceflow invoicing and billing for agencies and freelancers typescript vanilla js css finance / saas">
+        <a class="shot" href="demos/invoiceflow/demo/" aria-label="InvoiceFlow live demo">
+          <img src="assets/invoiceflow.png" data-gif="assets/invoiceflow.gif" alt="InvoiceFlow — Invoicing and billing for agencies and freelancers" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>InvoiceFlow</h3>
+            <span class="spacer"></span>
+            <span class="project-num">02</span>
+          </div>
+          <p class="project-tagline">Invoicing and billing for agencies and freelancers</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span><span class="chip">CSS</span></div>
+          <div class="row project-links">
+            <a href="demos/invoiceflow/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/invoiceflow" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="deskly helpdesk with sla timers, canned replies and csat typescript vanilla js support / saas">
+        <a class="shot" href="demos/deskly/demo/" aria-label="Deskly live demo">
+          <img src="assets/deskly.png" data-gif="assets/deskly.gif" alt="Deskly — Helpdesk with SLA timers, canned replies and CSAT" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Deskly</h3>
+            <span class="spacer"></span>
+            <span class="project-num">03</span>
+          </div>
+          <p class="project-tagline">Helpdesk with SLA timers, canned replies and CSAT</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/deskly/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/deskly" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="slotwise timezone-correct booking and scheduling engine typescript vanilla js scheduling / saas">
+        <a class="shot" href="demos/slotwise/demo/" aria-label="Slotwise live demo">
+          <img src="assets/slotwise.png" data-gif="assets/slotwise.gif" alt="Slotwise — Timezone-correct booking and scheduling engine" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Slotwise</h3>
+            <span class="spacer"></span>
+            <span class="project-num">04</span>
+          </div>
+          <p class="project-tagline">Timezone-correct booking and scheduling engine</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/slotwise/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/slotwise" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="leadpipe lightweight crm with pipeline, forecast and activity timeline typescript vanilla js crm / saas">
+        <a class="shot" href="demos/leadpipe/demo/" aria-label="Leadpipe live demo">
+          <img src="assets/leadpipe.png" data-gif="assets/leadpipe.gif" alt="Leadpipe — Lightweight CRM with pipeline, forecast and activity timeline" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Leadpipe</h3>
+            <span class="spacer"></span>
+            <span class="project-num">05</span>
+          </div>
+          <p class="project-tagline">Lightweight CRM with pipeline, forecast and activity timeline</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/leadpipe/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/leadpipe" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="peopleops onboarding checklists and leave management for small teams typescript vanilla js hr / saas">
+        <a class="shot" href="demos/peopleops/demo/" aria-label="PeopleOps live demo">
+          <img src="assets/peopleops.png" data-gif="assets/peopleops.gif" alt="PeopleOps — Onboarding checklists and leave management for small teams" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>PeopleOps</h3>
+            <span class="spacer"></span>
+            <span class="project-num">06</span>
+          </div>
+          <p class="project-tagline">Onboarding checklists and leave management for small teams</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/peopleops/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/peopleops" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="eventpass event ticketing with qr check-in, no dependencies typescript vanilla js canvas events / saas">
+        <a class="shot" href="demos/eventpass/demo/" aria-label="EventPass live demo">
+          <img src="assets/eventpass.png" data-gif="assets/eventpass.gif" alt="EventPass — Event ticketing with QR check-in, no dependencies" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>EventPass</h3>
+            <span class="spacer"></span>
+            <span class="project-num">07</span>
+          </div>
+          <p class="project-tagline">Event ticketing with QR check-in, no dependencies</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span><span class="chip">Canvas</span></div>
+          <div class="row project-links">
+            <a href="demos/eventpass/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/eventpass" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="schoolkit school admin: attendance, fees, exams and report cards typescript vanilla js education / erp">
+        <a class="shot" href="demos/schoolkit/demo/" aria-label="SchoolKit live demo">
+          <img src="assets/schoolkit.png" data-gif="assets/schoolkit.gif" alt="SchoolKit — School admin: attendance, fees, exams and report cards" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>SchoolKit</h3>
+            <span class="spacer"></span>
+            <span class="project-num">08</span>
+          </div>
+          <p class="project-tagline">School admin: attendance, fees, exams and report cards</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/schoolkit/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/schoolkit" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="AI &amp; data" data-search="ragforge a rag starter kit that runs without an api key python fastapi typescript ai / data">
+        <a class="shot" href="demos/ragforge/demo/" aria-label="RAGForge live demo">
+          <img src="assets/ragforge.png" data-gif="assets/ragforge.gif" alt="RAGForge — A RAG starter kit that runs without an API key" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>RAGForge</h3>
+            <span class="spacer"></span>
+            <span class="project-num">09</span>
+          </div>
+          <p class="project-tagline">A RAG starter kit that runs without an API key</p>
+          <div class="row wrap project-tech"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">TypeScript</span></div>
+          <div class="row project-links">
+            <a href="demos/ragforge/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/ragforge" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="AI &amp; data" data-search="docmind extract structured data from invoices and receipts typescript node ai / document automation">
+        <a class="shot" href="demos/docmind/demo/" aria-label="DocMind live demo">
+          <img src="assets/docmind.png" data-gif="assets/docmind.gif" alt="DocMind — Extract structured data from invoices and receipts" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>DocMind</h3>
+            <span class="spacer"></span>
+            <span class="project-num">10</span>
+          </div>
+          <p class="project-tagline">Extract structured data from invoices and receipts</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/docmind/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/docmind" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="AI &amp; data" data-search="leadscout research a company website and draft a personalised outreach email typescript node ai / growth">
+        <a class="shot" href="demos/leadscout/demo/" aria-label="LeadScout live demo">
+          <img src="assets/leadscout.png" data-gif="assets/leadscout.gif" alt="LeadScout — Research a company website and draft a personalised outreach email" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>LeadScout</h3>
+            <span class="spacer"></span>
+            <span class="project-num">11</span>
+          </div>
+          <p class="project-tagline">Research a company website and draft a personalised outreach email</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/leadscout/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/leadscout" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="AI &amp; data" data-search="promptops version, test and compare prompts like code typescript node ai / developer tools">
+        <a class="shot" href="demos/promptops/demo/" aria-label="PromptOps live demo">
+          <img src="assets/promptops.png" data-gif="assets/promptops.gif" alt="PromptOps — Version, test and compare prompts like code" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>PromptOps</h3>
+            <span class="spacer"></span>
+            <span class="project-num">12</span>
+          </div>
+          <p class="project-tagline">Version, test and compare prompts like code</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/promptops/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/promptops" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="SaaS" data-search="forecastlab time-series forecasting and backtesting in typescript typescript vanilla js data / analytics">
+        <a class="shot" href="demos/forecastlab/demo/" aria-label="ForecastLab live demo">
+          <img src="assets/forecastlab.png" data-gif="assets/forecastlab.gif" alt="ForecastLab — Time-series forecasting and backtesting in TypeScript" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>ForecastLab</h3>
+            <span class="spacer"></span>
+            <span class="project-num">13</span>
+          </div>
+          <p class="project-tagline">Time-series forecasting and backtesting in TypeScript</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/forecastlab/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/forecastlab" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Developer tools" data-search="mockforge turn an openapi spec into a stateful mock api server typescript node developer tools / api">
+        <a class="shot" href="demos/mockforge/demo/" aria-label="MockForge live demo">
+          <img src="assets/mockforge.png" data-gif="assets/mockforge.gif" alt="MockForge — Turn an OpenAPI spec into a stateful mock API server" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>MockForge</h3>
+            <span class="spacer"></span>
+            <span class="project-num">14</span>
+          </div>
+          <p class="project-tagline">Turn an OpenAPI spec into a stateful mock API server</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/mockforge/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/mockforge" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Developer tools" data-search="typeforge json schema → typescript, zod, python and go models typescript node developer tools">
+        <a class="shot" href="demos/typeforge/demo/" aria-label="TypeForge live demo">
+          <img src="assets/typeforge.png" data-gif="assets/typeforge.gif" alt="TypeForge — JSON Schema → TypeScript, Zod, Python and Go models" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>TypeForge</h3>
+            <span class="spacer"></span>
+            <span class="project-num">15</span>
+          </div>
+          <p class="project-tagline">JSON Schema → TypeScript, Zod, Python and Go models</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/typeforge/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/typeforge" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Developer tools" data-search="flagkit feature flags with targeting rules and edge evaluation typescript node developer tools">
+        <a class="shot" href="demos/flagkit/demo/" aria-label="FlagKit live demo">
+          <img src="assets/flagkit.png" data-gif="assets/flagkit.gif" alt="FlagKit — Feature flags with targeting rules and edge evaluation" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>FlagKit</h3>
+            <span class="spacer"></span>
+            <span class="project-num">16</span>
+          </div>
+          <p class="project-tagline">Feature flags with targeting rules and edge evaluation</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/flagkit/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/flagkit" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Developer tools" data-search="envsafe fail fast on bad environment variables typescript node developer tools">
+        <a class="shot" href="demos/envsafe/demo/" aria-label="EnvSafe live demo">
+          <img src="assets/envsafe.png" data-gif="assets/envsafe.gif" alt="EnvSafe — Fail fast on bad environment variables" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>EnvSafe</h3>
+            <span class="spacer"></span>
+            <span class="project-num">17</span>
+          </div>
+          <p class="project-tagline">Fail fast on bad environment variables</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/envsafe/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/envsafe" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="queuekit durable background jobs with retries, backoff and a dashboard typescript node sqlite backend / infrastructure">
+        <a class="shot" href="demos/queuekit/demo/" aria-label="QueueKit live demo">
+          <img src="assets/queuekit.png" data-gif="assets/queuekit.gif" alt="QueueKit — Durable background jobs with retries, backoff and a dashboard" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>QueueKit</h3>
+            <span class="spacer"></span>
+            <span class="project-num">18</span>
+          </div>
+          <p class="project-tagline">Durable background jobs with retries, backoff and a dashboard</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span><span class="chip">SQLite</span></div>
+          <div class="row project-links">
+            <a href="demos/queuekit/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/queuekit" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="socketchat realtime chat and presence over websockets typescript node websocket realtime / backend">
+        <a class="shot" href="demos/socketchat/demo/" aria-label="SocketChat live demo">
+          <img src="assets/socketchat.png" data-gif="assets/socketchat.gif" alt="SocketChat — Realtime chat and presence over WebSockets" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>SocketChat</h3>
+            <span class="spacer"></span>
+            <span class="project-num">19</span>
+          </div>
+          <p class="project-tagline">Realtime chat and presence over WebSockets</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span><span class="chip">WebSocket</span></div>
+          <div class="row project-links">
+            <a href="demos/socketchat/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/socketchat" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Developer tools" data-search="searchlite full-text search with bm25, synonyms and highlighting typescript node search / library">
+        <a class="shot" href="demos/searchlite/demo/" aria-label="SearchLite live demo">
+          <img src="assets/searchlite.png" data-gif="assets/searchlite.gif" alt="SearchLite — Full-text search with BM25, synonyms and highlighting" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>SearchLite</h3>
+            <span class="spacer"></span>
+            <span class="project-num">20</span>
+          </div>
+          <p class="project-tagline">Full-text search with BM25, synonyms and highlighting</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Node</span></div>
+          <div class="row project-links">
+            <a href="demos/searchlite/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/searchlite" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="compose cookbook battle-tested docker compose stacks for local and small production docker yaml shell devops">
+        <a class="shot" href="demos/compose-cookbook/demo/" aria-label="Compose Cookbook live demo">
+          <img src="assets/compose-cookbook.png" data-gif="assets/compose-cookbook.gif" alt="Compose Cookbook — Battle-tested Docker Compose stacks for local and small production" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Compose Cookbook</h3>
+            <span class="spacer"></span>
+            <span class="project-num">21</span>
+          </div>
+          <p class="project-tagline">Battle-tested Docker Compose stacks for local and small production</p>
+          <div class="row wrap project-tech"><span class="chip">Docker</span><span class="chip">YAML</span><span class="chip">Shell</span></div>
+          <div class="row project-links">
+            <a href="demos/compose-cookbook/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/compose-cookbook" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="k8s blueprint production kubernetes blueprint: helm chart + kustomize overlays kubernetes helm yaml devops">
+        <a class="shot" href="demos/k8s-blueprint/demo/" aria-label="K8s Blueprint live demo">
+          <img src="assets/k8s-blueprint.png" data-gif="assets/k8s-blueprint.gif" alt="K8s Blueprint — Production Kubernetes blueprint: Helm chart + Kustomize overlays" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>K8s Blueprint</h3>
+            <span class="spacer"></span>
+            <span class="project-num">22</span>
+          </div>
+          <p class="project-tagline">Production Kubernetes blueprint: Helm chart + Kustomize overlays</p>
+          <div class="row wrap project-tech"><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">YAML</span></div>
+          <div class="row project-links">
+            <a href="demos/k8s-blueprint/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/k8s-blueprint" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="aws baseline terraform baseline for a secure, observable aws account terraform aws hcl cloud">
+        <a class="shot" href="demos/aws-baseline/demo/" aria-label="AWS Baseline live demo">
+          <img src="assets/aws-baseline.png" data-gif="assets/aws-baseline.gif" alt="AWS Baseline — Terraform baseline for a secure, observable AWS account" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>AWS Baseline</h3>
+            <span class="spacer"></span>
+            <span class="project-num">23</span>
+          </div>
+          <p class="project-tagline">Terraform baseline for a secure, observable AWS account</p>
+          <div class="row wrap project-tech"><span class="chip">Terraform</span><span class="chip">AWS</span><span class="chip">HCL</span></div>
+          <div class="row project-links">
+            <a href="demos/aws-baseline/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/aws-baseline" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="ci templates reusable github actions workflows for real projects github actions yaml shell devops">
+        <a class="shot" href="demos/ci-templates/demo/" aria-label="CI Templates live demo">
+          <img src="assets/ci-templates.png" data-gif="assets/ci-templates.gif" alt="CI Templates — Reusable GitHub Actions workflows for real projects" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>CI Templates</h3>
+            <span class="spacer"></span>
+            <span class="project-num">24</span>
+          </div>
+          <p class="project-tagline">Reusable GitHub Actions workflows for real projects</p>
+          <div class="row wrap project-tech"><span class="chip">GitHub Actions</span><span class="chip">YAML</span><span class="chip">Shell</span></div>
+          <div class="row project-links">
+            <a href="demos/ci-templates/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/ci-templates" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Design &amp; frontend" data-search="arvion ui a design system with tokens, 30 components and live docs css typescript web components design / frontend">
+        <a class="shot" href="demos/design-system/demo/" aria-label="Arvion UI live demo">
+          <img src="assets/design-system.png" data-gif="assets/design-system.gif" alt="Arvion UI — A design system with tokens, 30 components and live docs" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Arvion UI</h3>
+            <span class="spacer"></span>
+            <span class="project-num">25</span>
+          </div>
+          <p class="project-tagline">A design system with tokens, 30 components and live docs</p>
+          <div class="row wrap project-tech"><span class="chip">CSS</span><span class="chip">TypeScript</span><span class="chip">Web Components</span></div>
+          <div class="row project-links">
+            <a href="demos/design-system/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/design-system" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Design &amp; frontend" data-search="motion lab copy-paste css animations and micro-interactions css vanilla js design / frontend">
+        <a class="shot" href="demos/motion-lab/demo/" aria-label="Motion Lab live demo">
+          <img src="assets/motion-lab.png" data-gif="assets/motion-lab.gif" alt="Motion Lab — Copy-paste CSS animations and micro-interactions" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Motion Lab</h3>
+            <span class="spacer"></span>
+            <span class="project-num">26</span>
+          </div>
+          <p class="project-tagline">Copy-paste CSS animations and micro-interactions</p>
+          <div class="row wrap project-tech"><span class="chip">CSS</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/motion-lab/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/motion-lab" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Design &amp; frontend" data-search="landing kit six conversion-focused landing page templates html css vanilla js design / marketing">
+        <a class="shot" href="demos/landing-kit/demo/" aria-label="Landing Kit live demo">
+          <img src="assets/landing-kit.png" data-gif="assets/landing-kit.gif" alt="Landing Kit — Six conversion-focused landing page templates" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Landing Kit</h3>
+            <span class="spacer"></span>
+            <span class="project-num">27</span>
+          </div>
+          <p class="project-tagline">Six conversion-focused landing page templates</p>
+          <div class="row wrap project-tech"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Vanilla JS</span></div>
+          <div class="row project-links">
+            <a href="demos/landing-kit/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/landing-kit" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Mobile" data-search="gharko sathi app flutter case study: home services with kyc and escrow flutter dart riverpod mobile / case study">
+        <a class="shot" href="demos/gharkosathi-app/demo/" aria-label="GharKo Sathi App live demo">
+          <img src="assets/gharkosathi-app.png" data-gif="assets/gharkosathi-app.gif" alt="GharKo Sathi App — Flutter case study: home services with KYC and escrow" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>GharKo Sathi App</h3>
+            <span class="spacer"></span>
+            <span class="project-num">28</span>
+          </div>
+          <p class="project-tagline">Flutter case study: home services with KYC and escrow</p>
+          <div class="row wrap project-tech"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Riverpod</span></div>
+          <div class="row project-links">
+            <a href="demos/gharkosathi-app/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/gharkosathi-app" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Mobile" data-search="bazaar app react native marketplace case study with esewa/khalti checkout react native expo typescript mobile / case study">
+        <a class="shot" href="demos/bazaar-app/demo/" aria-label="Bazaar App live demo">
+          <img src="assets/bazaar-app.png" data-gif="assets/bazaar-app.gif" alt="Bazaar App — React Native marketplace case study with eSewa/Khalti checkout" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>Bazaar App</h3>
+            <span class="spacer"></span>
+            <span class="project-num">29</span>
+          </div>
+          <p class="project-tagline">React Native marketplace case study with eSewa/Khalti checkout</p>
+          <div class="row wrap project-tech"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">TypeScript</span></div>
+          <div class="row project-links">
+            <a href="demos/bazaar-app/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/bazaar-app" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="Developer tools" data-search="synckit offline-first sync engine with conflict resolution typescript dart mobile / library">
+        <a class="shot" href="demos/sync-kit/demo/" aria-label="SyncKit live demo">
+          <img src="assets/sync-kit.png" data-gif="assets/sync-kit.gif" alt="SyncKit — Offline-first sync engine with conflict resolution" loading="lazy" width="1440" height="900" />
+          <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
+        </a>
+        <div class="project-body">
+          <div class="row" style="gap:8px;align-items:baseline">
+            <h3>SyncKit</h3>
+            <span class="spacer"></span>
+            <span class="project-num">30</span>
+          </div>
+          <p class="project-tagline">Offline-first sync engine with conflict resolution</p>
+          <div class="row wrap project-tech"><span class="chip">TypeScript</span><span class="chip">Dart</span></div>
+          <div class="row project-links">
+            <a href="demos/sync-kit/demo/">Open demo →</a>
+            <span class="spacer"></span>
+            <a href="https://github.com/arvion-technology/sync-kit" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="empty" id="no-results" hidden><strong>Nothing matches that filter</strong>Try a different word or category.</div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="section-head"><div><div class="eyebrow">In production</div><h2>Client work</h2></div></div>
+    <div class="work-grid">
+      <a class="work-card" href="https://gharkosewa.com" target="_blank" rel="noopener">
+        <img class="work-shot" src="assets/clients/gharkosewa.png" alt="GharKo Sathi website" loading="lazy" />
+        <div class="work-tag">Home services · Nepal</div>
+        <h3>GharKo Sathi</h3>
+        <p>On-demand home services with KYC-verified professionals, escrow-held payments, dispute resolution and separate customer and partner apps. Flutter customer app, React web, NestJS API, eSewa/Khalti payouts.</p>
+        <span class="work-link">gharkosewa.com ↗</span>
+      </a>
+      <a class="work-card" href="https://hamrosajhabazaar.com" target="_blank" rel="noopener">
+        <img class="work-shot" src="assets/clients/hamro.png" alt="Hamro Sajha Bazaar website" loading="lazy" />
+        <div class="work-tag">Marketplace · Nepal</div>
+        <h3>Hamro Sajha Bazaar</h3>
+        <p>Multi-category national marketplace: secondhand goods, vehicles, jobs, rentals, medical, trades and food, with seller verification, escrow payments, buyer protection and Nepali/English UI.</p>
+        <span class="work-link">hamrosajhabazaar.com ↗</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div>
+      <div class="eyebrow">About</div>
+      <h2>We build the product, not just the prototype.</h2>
+      <p>Arvion Technologies is a product engineering studio in Kathmandu, Nepal. We take products from an idea to production: architecture, web and mobile clients, APIs, payments, deployment and the runbook. The repositories here are how we work when nobody is watching — tests, release notes, honest READMEs.</p>
+      <div class="about-points">
+        <div><h4>Product engineering</h4><p>Web platforms, mobile apps (Flutter, React Native), enterprise systems and integrations.</p></div>
+        <div><h4>Cloud and delivery</h4><p>AWS and GCP, Docker, Kubernetes, CI/CD, observability and cost control.</p></div>
+        <div><h4>Design that ships</h4><p>Design systems, conversion-focused interfaces and accessible components.</p></div>
+      </div>
+      <div class="row wrap mt-2">
+        <a class="btn primary" href="https://arviontech.net/contact" target="_blank" rel="noopener">Start a project</a>
+        <a class="btn" href="mailto:hello@arviontech.net">hello@arviontech.net</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="row wrap" style="gap:18px">
+    <span class="brand-mark" style="width:26px;height:26px;font-size:13px">A</span>
+    <span>Arvion Technologies Pvt. Ltd. · Kathmandu, Nepal</span>
+    <span class="spacer"></span>
+    <a href="https://arviontech.net">arviontech.net</a>
+    <a href="https://github.com/arvion-technology">GitHub</a>
+    <a href="build-log.html">Build log</a>
+    <a href="mailto:hello@arviontech.net">Email</a>
+  </div>
+  <p class="small muted" style="margin:14px 0 0">All projects MIT licensed. Demos are static and run entirely in your browser; no analytics are collected here.</p>
+</footer>
+
+<script src="labs.js"></script>
+</body>
+</html>

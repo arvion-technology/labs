@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tempo — a running plan that bends instead of breaking</title>
+  <meta name="description" content="Tempo is a running app with an adaptive weekly plan: miss a session and the rest of the week re-plans around it." />
+  <meta name="color-scheme" content="dark light" />
+  <link rel="stylesheet" href="../landing.css" />
+  <script src="../landing.js" defer></script>
+</head>
+<body data-template="app">
+  <header class="lk-nav" data-nav>
+    <div class="lk-wrap lk-nav-inner">
+      <a class="lk-brand" href="index.html"><span class="lk-logo">T</span> Tempo</a>
+      <nav class="lk-nav-links" aria-label="Primary">
+        <a href="#product">The plan</a>
+        <a href="#how">How it adapts</a>
+        <a href="#pricing">Beta</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <div class="lk-nav-actions">
+        <button class="lk-theme" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <a class="lk-btn lk-btn--accent" href="#cta">Join the beta</a>
+        <button class="lk-burger" type="button" data-nav-toggle aria-label="Open menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO — centered, phone-first. The promise is emotional but the mechanism
+         is specific: the week re-plans. The CTA is a beta request because the app
+         is not on a store yet. -->
+    <section class="lk-hero" data-section="hero">
+      <div class="lk-wrap lk-hero-grid">
+        <div class="lk-hero-copy reveal">
+          <div class="lk-eyebrow">Running, with a plan that listens</div>
+          <h1 class="lk-h1">A running plan that bends instead of breaking.</h1>
+          <p class="lk-lead">Tell Tempo which days you can run. When a bad week happens, the plan moves the missed sessions instead of starting your streak from zero.</p>
+          <div class="lk-row" style="margin-top:24px">
+            <a class="lk-btn lk-btn--accent lk-btn--lg" href="#cta">Join the iOS beta</a>
+            <a class="lk-btn lk-btn--ghost" href="#product">See the plan →</a>
+          </div>
+          <div class="lk-hero-meta">
+            <span><i></i> Free during beta</span>
+            <span><i></i> iOS and Android</span>
+            <span><i></i> No streak guilt</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="lk-phone" role="img" aria-label="Tempo app showing a weekly plan and an adapted long run">
+            <div class="lk-phone-screen">
+              <div class="lk-phone-top"><span>This week</span><span>3 of 4 done</span></div>
+              <div class="lk-phone-ring"><div><b>68%</b><span>week</span></div></div>
+              <div class="lk-phone-card"><b>Thursday · easy 5k</b><span>Moved from Wednesday · 32 min</span></div>
+              <div class="lk-phone-card"><b>Saturday · long 12k</b><span>Adjusted down from 15k after two missed days</span></div>
+              <div class="lk-phone-bars">
+                <div class="lk-phone-bar"><i style="width:74%"></i></div>
+                <div class="lk-phone-bar"><i style="width:42%"></i></div>
+                <div class="lk-phone-bar"><i style="width:58%"></i></div>
+              </div>
+              <div class="lk-phone-tabs"><span>Today</span><span>Plan</span><span>Runs</span><span>You</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF — mechanism, not downloads. Three claims a beta user can observe in
+         the first week. -->
+    <section class="lk-band lk-section--tight" data-section="proof">
+      <div class="lk-wrap lk-strip">
+        <div class="lk-strip-item"><b>No streak counter</b><span>A missed run moves the week; it never resets a number to zero.</span></div>
+        <div class="lk-strip-item"><b>Plans from your last four weeks</b><span>The starting volume is based on runs you actually logged, not a form.</span></div>
+        <div class="lk-strip-item"><b>Every adjustment is explained</b><span>Tap a changed session to see why the plan moved it.</span></div>
+      </div>
+    </section>
+
+    <!-- PRODUCT — three capabilities, each a real behaviour of the app. -->
+    <section class="lk-section" id="product" data-section="product">
+      <div class="lk-wrap">
+        <div class="lk-section-head lk-center reveal">
+          <div class="lk-eyebrow">The plan</div>
+          <h2 class="lk-h2">Built for weeks that do not go to plan.</h2>
+          <p class="lk-lead">Most running apps treat a missed session as failure. Tempo treats it as information about your week.</p>
+        </div>
+        <div class="lk-grid-3">
+          <div class="lk-card reveal"><div class="lk-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 1 1 3 6.2M4 12v5h5"/></svg></div><h3>Adaptive weeks</h3><p>Miss Wednesday and Thursday becomes the easy run. The long run shrinks only if the week's total would otherwise jump too far.</p></div>
+          <div class="lk-card reveal"><div class="lk-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 3 5-7 4 4"/></svg></div><h3>Effort, not pace</h3><p>Sessions are prescribed by effort and time. A hilly route in humid weather is allowed to be slower.</p></div>
+          <div class="lk-card reveal"><div class="lk-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></div><h3>Routes that suit the session</h3><p>Loop for the long run, an out-and-back for intervals. Tempo suggests a direction, not just a distance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW — three steps. Step one is "pick four days", which someone can do in
+         the first minute of the app. -->
+    <section class="lk-section lk-band" id="how" data-section="how">
+      <div class="lk-wrap">
+        <div class="lk-section-head reveal">
+          <div class="lk-eyebrow">How it adapts</div>
+          <h2 class="lk-h2">Three steps, then the plan runs itself.</h2>
+        </div>
+        <div class="lk-steps">
+          <div class="lk-step reveal"><h3>Pick the days you can run</h3><p>Four days, or three if that is honest. The plan is built around the week you have, not an ideal one.</p></div>
+          <div class="lk-step reveal"><h3>Run the first session</h3><p>No test race and no pace target. The first two weeks establish a starting volume from what you actually do.</p></div>
+          <div class="lk-step reveal"><h3>Let the week re-plan</h3><p>Miss a day and the next open slot takes the session. Change your mind again and it moves again; the history keeps both choices.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIONS — price, data and injury. The three real reasons to close the
+         app store page. -->
+    <section class="lk-section" id="faq" data-section="objections">
+      <div class="lk-wrap lk-faq">
+        <div class="reveal">
+          <div class="lk-eyebrow">Before the beta</div>
+          <h2 class="lk-h2">The honest answers.</h2>
+          <p>Tempo is in beta. These are the limits of the current build, not the roadmap.</p>
+          <a class="lk-action" href="#cta">Join the beta →</a>
+        </div>
+        <div class="lk-faq-list reveal">
+          <details open><summary>What does it cost?</summary><p>Nothing during the beta. After launch the plan is free for one active plan and a small yearly price for unlimited plan history; beta users keep their data either way.</p></details>
+          <details><summary>What happens to my run data?</summary><p>Runs sync to your account so the plan can adapt across devices. Export any run as GPX, and delete the account from settings without emailing support.</p></details>
+          <details><summary>Does it work around injury?</summary><p>You can pause the plan and mark a session as pain, not a missed run. Tempo will not prescribe a comeback plan in the current build; it holds the week until you unpause.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING — beta pricing, clearly labelled as pre-launch. -->
+    <section class="lk-section lk-band" id="pricing" data-section="pricing">
+      <div class="lk-wrap">
+        <div class="lk-section-head lk-center reveal">
+          <div class="lk-eyebrow">Beta pricing</div>
+          <h2 class="lk-h2">Free while the app is in beta.</h2>
+          <p class="lk-lead">One plan at a time, full history, no card. When the beta ends, existing users get the launch price locked for a year.</p>
+        </div>
+        <div class="lk-grid-2" style="max-width:760px;margin-inline:auto">
+          <div class="lk-price lk-price--featured reveal">
+            <span class="lk-price-tag">Beta</span><h3>Tempo beta</h3>
+            <div class="amount">$0 <small>while in beta</small></div>
+            <ul><li>Adaptive weekly plan</li><li>Full run history</li><li>iOS and Android</li><li>Export to GPX</li></ul>
+            <a class="lk-btn lk-btn--accent lk-btn--block" href="#cta">Request an invite</a>
+          </div>
+          <div class="lk-price reveal"><h3>After launch</h3>
+            <div class="amount">$29 <small>/ year</small></div>
+            <ul><li>Everything in beta</li><li>Plan history across seasons</li><li>Launch price locked for beta users</li></ul>
+            <a class="lk-btn lk-btn--block" href="#cta">Join the beta instead</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA — repeat the beta request. The risk reversal is "free, no card". -->
+    <section class="lk-section" id="cta" data-section="cta">
+      <div class="lk-wrap">
+        <div class="lk-cta reveal">
+          <h2>Run the week you have.</h2>
+          <p>The beta is invite-only while the plan engine settles. Leave an email and we will send one link when your slot opens.</p>
+          <div class="lk-row">
+            <a class="lk-btn lk-btn--invert lk-btn--lg" href="mailto:beta@example.com?subject=Tempo%20beta">Join the beta</a>
+            <a class="lk-btn lk-btn--lg" style="border-color:rgba(255,255,255,.4);color:inherit" href="#how">See how it adapts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lk-footer">
+    <div class="lk-wrap">
+      <div class="lk-footer-grid">
+        <div><a class="lk-brand" href="index.html"><span class="lk-logo">T</span> Tempo</a><p class="lk-small" style="margin-top:12px;max-width:30ch">A running app with an adaptive plan. Sample template from Arvion's Landing Kit; the app is not on a store.</p></div>
+        <div><h4>App</h4><div class="lk-footer-links"><a href="#product">The plan</a><a href="#pricing">Beta</a><a href="#faq">Questions</a></div></div>
+        <div><h4>Company</h4><div class="lk-footer-links"><a href="index.html">All templates</a><a href="https://arviontech.net" target="_blank" rel="noopener">Arvion Technologies</a></div></div>
+        <div><h4>Legal</h4><div class="lk-footer-links"><a href="#faq">Privacy</a><a href="#faq">Terms</a></div></div>
+      </div>
+      <div class="lk-footer-base"><span>© <span data-year>2026</span> Tempo (sample product)</span><span>Template: mobile app · dark by default · responsive to 360px</span></div>
+    </div>
+  </footer>
+
+  <a class="lk-back" href="index.html">← All six templates</a>
+</body>
+</html>
