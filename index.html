@@ -9,7 +9,7 @@
 <meta property="og:title" content="Arvion Labs — open-source engineering from Kathmandu" />
 <meta property="og:description" content="30 runnable projects: product apps, developer tools and infrastructure, all with live demos." />
 <meta property="og:image" content="assets/pulse.png" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0f1a'/><text x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='%23f5c26b' text-anchor='middle'>A</text></svg>" />
+<link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="labs.css" />
 </head>
 <body>
@@ -18,7 +18,7 @@
 
 <header class="nav">
   <a class="brand" href="./">
-    <img class="brand-logo" src="assets/logo-mark-gold.png" alt="Arvion" />
+    <img class="brand-logo" src="assets/peak-a-128.png" alt="Arvion" />
     <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
   </a>
   <span class="spacer"></span>
@@ -33,7 +33,7 @@
     <div class="hero-copy">
       <div class="eyebrow">Arvion Technologies · Kathmandu</div>
       <h1>Open-source work from a product engineering studio.</h1>
-      <p>30 runnable projects across product SaaS, AI tooling, developer tools, cloud infrastructure and mobile. No sign-ups, no API keys — open a demo and click around. The source is on GitHub, tests included.</p>
+      <p>30 runnable projects across product SaaS, AI tooling, developer tools, cloud infrastructure and mobile — built by one studio, deliberately not one visual theme. No sign-ups, no API keys: open a demo and click around. The source is on GitHub, tests included.</p>
       <div class="row wrap hero-actions">
         <a class="btn primary lg" href="#projects">Browse the projects</a>
         <a class="btn lg" href="https://github.com/arvion-technology" target="_blank" rel="noopener">GitHub organisation</a>
@@ -67,9 +67,17 @@
       <button class="filter active" data-filter="all">All</button>
       <button class="filter" data-filter="SaaS">SaaS</button><button class="filter" data-filter="AI &amp; data">AI &amp; data</button><button class="filter" data-filter="Developer tools">Developer tools</button><button class="filter" data-filter="Cloud &amp; DevOps">Cloud &amp; DevOps</button><button class="filter" data-filter="Design &amp; frontend">Design &amp; frontend</button><button class="filter" data-filter="Mobile">Mobile</button>
     </div>
+    <div class="filters palette-filters" id="look-filters">
+      <span class="filter-label">Palette</span>
+      <button class="filter active" data-look-filter="all">Any</button>
+      <button class="filter" data-look-filter="dark">Dark</button>
+      <button class="filter" data-look-filter="light">Light</button>
+      <button class="filter" data-look-filter="color">Colour</button>
+      <button class="filter" data-look-filter="mono">Mono</button>
+    </div>
     <div class="project-grid" id="project-grid">
 
-      <article class="project-card" data-category="SaaS" data-search="pulse self-hosted product analytics with funnels, retention and cohorts typescript vanilla js svg analytics / saas">
+      <article class="project-card" data-category="SaaS" data-look="dark" data-search="pulse self-hosted product analytics with funnels, retention and cohorts typescript vanilla js svg analytics / saas">
         <a class="shot" href="demos/pulse/demo/" aria-label="Pulse live demo">
           <img src="assets/pulse.png" data-gif="assets/pulse.gif" alt="Pulse — Self-hosted product analytics with funnels, retention and cohorts" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -90,7 +98,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="invoiceflow invoicing and billing for agencies and freelancers typescript vanilla js css finance / saas">
+      <article class="project-card" data-category="SaaS" data-look="light" data-search="invoiceflow invoicing and billing for agencies and freelancers typescript vanilla js css finance / saas">
         <a class="shot" href="demos/invoiceflow/demo/" aria-label="InvoiceFlow live demo">
           <img src="assets/invoiceflow.png" data-gif="assets/invoiceflow.gif" alt="InvoiceFlow — Invoicing and billing for agencies and freelancers" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -111,7 +119,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="deskly helpdesk with sla timers, canned replies and csat typescript vanilla js support / saas">
+      <article class="project-card" data-category="SaaS" data-look="dark" data-search="deskly helpdesk with sla timers, canned replies and csat typescript vanilla js support / saas">
         <a class="shot" href="demos/deskly/demo/" aria-label="Deskly live demo">
           <img src="assets/deskly.png" data-gif="assets/deskly.gif" alt="Deskly — Helpdesk with SLA timers, canned replies and CSAT" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -132,7 +140,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="slotwise timezone-correct booking and scheduling engine typescript vanilla js scheduling / saas">
+      <article class="project-card" data-category="SaaS" data-look="color" data-search="slotwise timezone-correct booking and scheduling engine typescript vanilla js scheduling / saas">
         <a class="shot" href="demos/slotwise/demo/" aria-label="Slotwise live demo">
           <img src="assets/slotwise.png" data-gif="assets/slotwise.gif" alt="Slotwise — Timezone-correct booking and scheduling engine" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -153,7 +161,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="leadpipe lightweight crm with pipeline, forecast and activity timeline typescript vanilla js crm / saas">
+      <article class="project-card" data-category="SaaS" data-look="light" data-search="leadpipe lightweight crm with pipeline, forecast and activity timeline typescript vanilla js crm / saas">
         <a class="shot" href="demos/leadpipe/demo/" aria-label="Leadpipe live demo">
           <img src="assets/leadpipe.png" data-gif="assets/leadpipe.gif" alt="Leadpipe — Lightweight CRM with pipeline, forecast and activity timeline" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -174,7 +182,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="peopleops onboarding checklists and leave management for small teams typescript vanilla js hr / saas">
+      <article class="project-card" data-category="SaaS" data-look="light" data-search="peopleops onboarding checklists and leave management for small teams typescript vanilla js hr / saas">
         <a class="shot" href="demos/peopleops/demo/" aria-label="PeopleOps live demo">
           <img src="assets/peopleops.png" data-gif="assets/peopleops.gif" alt="PeopleOps — Onboarding checklists and leave management for small teams" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -195,7 +203,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="eventpass event ticketing with qr check-in, no dependencies typescript vanilla js canvas events / saas">
+      <article class="project-card" data-category="SaaS" data-look="color" data-search="eventpass event ticketing with qr check-in, no dependencies typescript vanilla js canvas events / saas">
         <a class="shot" href="demos/eventpass/demo/" aria-label="EventPass live demo">
           <img src="assets/eventpass.png" data-gif="assets/eventpass.gif" alt="EventPass — Event ticketing with QR check-in, no dependencies" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -216,7 +224,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="schoolkit school admin: attendance, fees, exams and report cards typescript vanilla js education / erp">
+      <article class="project-card" data-category="SaaS" data-look="light" data-search="schoolkit school admin: attendance, fees, exams and report cards typescript vanilla js education / erp">
         <a class="shot" href="demos/schoolkit/demo/" aria-label="SchoolKit live demo">
           <img src="assets/schoolkit.png" data-gif="assets/schoolkit.gif" alt="SchoolKit — School admin: attendance, fees, exams and report cards" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -237,7 +245,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="AI &amp; data" data-search="ragforge a rag starter kit that runs without an api key python fastapi typescript ai / data">
+      <article class="project-card" data-category="AI &amp; data" data-look="color" data-search="ragforge a rag starter kit that runs without an api key python fastapi typescript ai / data">
         <a class="shot" href="demos/ragforge/demo/" aria-label="RAGForge live demo">
           <img src="assets/ragforge.png" data-gif="assets/ragforge.gif" alt="RAGForge — A RAG starter kit that runs without an API key" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -258,7 +266,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="AI &amp; data" data-search="docmind extract structured data from invoices and receipts typescript node ai / document automation">
+      <article class="project-card" data-category="AI &amp; data" data-look="color" data-search="docmind extract structured data from invoices and receipts typescript node ai / document automation">
         <a class="shot" href="demos/docmind/demo/" aria-label="DocMind live demo">
           <img src="assets/docmind.png" data-gif="assets/docmind.gif" alt="DocMind — Extract structured data from invoices and receipts" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -279,7 +287,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="AI &amp; data" data-search="leadscout research a company website and draft a personalised outreach email typescript node ai / growth">
+      <article class="project-card" data-category="AI &amp; data" data-look="color" data-search="leadscout research a company website and draft a personalised outreach email typescript node ai / growth">
         <a class="shot" href="demos/leadscout/demo/" aria-label="LeadScout live demo">
           <img src="assets/leadscout.png" data-gif="assets/leadscout.gif" alt="LeadScout — Research a company website and draft a personalised outreach email" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -300,7 +308,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="AI &amp; data" data-search="promptops version, test and compare prompts like code typescript node ai / developer tools">
+      <article class="project-card" data-category="AI &amp; data" data-look="mono" data-search="promptops version, test and compare prompts like code typescript node ai / developer tools">
         <a class="shot" href="demos/promptops/demo/" aria-label="PromptOps live demo">
           <img src="assets/promptops.png" data-gif="assets/promptops.gif" alt="PromptOps — Version, test and compare prompts like code" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -321,7 +329,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="SaaS" data-search="forecastlab time-series forecasting and backtesting in typescript typescript vanilla js data / analytics">
+      <article class="project-card" data-category="SaaS" data-look="color" data-search="forecastlab time-series forecasting and backtesting in typescript typescript vanilla js data / analytics">
         <a class="shot" href="demos/forecastlab/demo/" aria-label="ForecastLab live demo">
           <img src="assets/forecastlab.png" data-gif="assets/forecastlab.gif" alt="ForecastLab — Time-series forecasting and backtesting in TypeScript" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -342,7 +350,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Developer tools" data-search="mockforge turn an openapi spec into a stateful mock api server typescript node developer tools / api">
+      <article class="project-card" data-category="Developer tools" data-look="light" data-search="mockforge turn an openapi spec into a stateful mock api server typescript node developer tools / api">
         <a class="shot" href="demos/mockforge/demo/" aria-label="MockForge live demo">
           <img src="assets/mockforge.png" data-gif="assets/mockforge.gif" alt="MockForge — Turn an OpenAPI spec into a stateful mock API server" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -363,7 +371,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Developer tools" data-search="typeforge json schema → typescript, zod, python and go models typescript node developer tools">
+      <article class="project-card" data-category="Developer tools" data-look="mono" data-search="typeforge json schema → typescript, zod, python and go models typescript node developer tools">
         <a class="shot" href="demos/typeforge/demo/" aria-label="TypeForge live demo">
           <img src="assets/typeforge.png" data-gif="assets/typeforge.gif" alt="TypeForge — JSON Schema → TypeScript, Zod, Python and Go models" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -384,7 +392,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Developer tools" data-search="flagkit feature flags with targeting rules and edge evaluation typescript node developer tools">
+      <article class="project-card" data-category="Developer tools" data-look="color" data-search="flagkit feature flags with targeting rules and edge evaluation typescript node developer tools">
         <a class="shot" href="demos/flagkit/demo/" aria-label="FlagKit live demo">
           <img src="assets/flagkit.png" data-gif="assets/flagkit.gif" alt="FlagKit — Feature flags with targeting rules and edge evaluation" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -405,7 +413,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Developer tools" data-search="envsafe fail fast on bad environment variables typescript node developer tools">
+      <article class="project-card" data-category="Developer tools" data-look="mono" data-search="envsafe fail fast on bad environment variables typescript node developer tools">
         <a class="shot" href="demos/envsafe/demo/" aria-label="EnvSafe live demo">
           <img src="assets/envsafe.png" data-gif="assets/envsafe.gif" alt="EnvSafe — Fail fast on bad environment variables" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -426,7 +434,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="queuekit durable background jobs with retries, backoff and a dashboard typescript node sqlite backend / infrastructure">
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-look="dark" data-search="queuekit durable background jobs with retries, backoff and a dashboard typescript node sqlite backend / infrastructure">
         <a class="shot" href="demos/queuekit/demo/" aria-label="QueueKit live demo">
           <img src="assets/queuekit.png" data-gif="assets/queuekit.gif" alt="QueueKit — Durable background jobs with retries, backoff and a dashboard" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -447,7 +455,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="socketchat realtime chat and presence over websockets typescript node websocket realtime / backend">
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-look="color" data-search="socketchat realtime chat and presence over websockets typescript node websocket realtime / backend">
         <a class="shot" href="demos/socketchat/demo/" aria-label="SocketChat live demo">
           <img src="assets/socketchat.png" data-gif="assets/socketchat.gif" alt="SocketChat — Realtime chat and presence over WebSockets" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -468,7 +476,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Developer tools" data-search="searchlite full-text search with bm25, synonyms and highlighting typescript node search / library">
+      <article class="project-card" data-category="Developer tools" data-look="mono" data-search="searchlite full-text search with bm25, synonyms and highlighting typescript node search / library">
         <a class="shot" href="demos/searchlite/demo/" aria-label="SearchLite live demo">
           <img src="assets/searchlite.png" data-gif="assets/searchlite.gif" alt="SearchLite — Full-text search with BM25, synonyms and highlighting" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -489,7 +497,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="compose cookbook battle-tested docker compose stacks for local and small production docker yaml shell devops">
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-look="light" data-search="compose cookbook battle-tested docker compose stacks for local and small production docker yaml shell devops">
         <a class="shot" href="demos/compose-cookbook/demo/" aria-label="Compose Cookbook live demo">
           <img src="assets/compose-cookbook.png" data-gif="assets/compose-cookbook.gif" alt="Compose Cookbook — Battle-tested Docker Compose stacks for local and small production" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -510,7 +518,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="k8s blueprint production kubernetes blueprint: helm chart + kustomize overlays kubernetes helm yaml devops">
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-look="color" data-search="k8s blueprint production kubernetes blueprint: helm chart + kustomize overlays kubernetes helm yaml devops">
         <a class="shot" href="demos/k8s-blueprint/demo/" aria-label="K8s Blueprint live demo">
           <img src="assets/k8s-blueprint.png" data-gif="assets/k8s-blueprint.gif" alt="K8s Blueprint — Production Kubernetes blueprint: Helm chart + Kustomize overlays" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -531,7 +539,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="aws baseline terraform baseline for a secure, observable aws account terraform aws hcl cloud">
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-look="color" data-search="aws baseline terraform baseline for a secure, observable aws account terraform aws hcl cloud">
         <a class="shot" href="demos/aws-baseline/demo/" aria-label="AWS Baseline live demo">
           <img src="assets/aws-baseline.png" data-gif="assets/aws-baseline.gif" alt="AWS Baseline — Terraform baseline for a secure, observable AWS account" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -552,7 +560,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Cloud &amp; DevOps" data-search="ci templates reusable github actions workflows for real projects github actions yaml shell devops">
+      <article class="project-card" data-category="Cloud &amp; DevOps" data-look="mono" data-search="ci templates reusable github actions workflows for real projects github actions yaml shell devops">
         <a class="shot" href="demos/ci-templates/demo/" aria-label="CI Templates live demo">
           <img src="assets/ci-templates.png" data-gif="assets/ci-templates.gif" alt="CI Templates — Reusable GitHub Actions workflows for real projects" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -573,7 +581,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Design &amp; frontend" data-search="arvion ui a design system with tokens, 30 components and live docs css typescript web components design / frontend">
+      <article class="project-card" data-category="Design &amp; frontend" data-look="dark" data-search="arvion ui a design system with tokens, 30 components and live docs css typescript web components design / frontend">
         <a class="shot" href="demos/design-system/demo/" aria-label="Arvion UI live demo">
           <img src="assets/design-system.png" data-gif="assets/design-system.gif" alt="Arvion UI — A design system with tokens, 30 components and live docs" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -594,7 +602,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Design &amp; frontend" data-search="motion lab copy-paste css animations and micro-interactions css vanilla js design / frontend">
+      <article class="project-card" data-category="Design &amp; frontend" data-look="color" data-search="motion lab copy-paste css animations and micro-interactions css vanilla js design / frontend">
         <a class="shot" href="demos/motion-lab/demo/" aria-label="Motion Lab live demo">
           <img src="assets/motion-lab.png" data-gif="assets/motion-lab.gif" alt="Motion Lab — Copy-paste CSS animations and micro-interactions" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -615,7 +623,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Design &amp; frontend" data-search="landing kit six conversion-focused landing page templates html css vanilla js design / marketing">
+      <article class="project-card" data-category="Design &amp; frontend" data-look="color" data-search="landing kit six conversion-focused landing page templates html css vanilla js design / marketing">
         <a class="shot" href="demos/landing-kit/demo/" aria-label="Landing Kit live demo">
           <img src="assets/landing-kit.png" data-gif="assets/landing-kit.gif" alt="Landing Kit — Six conversion-focused landing page templates" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -636,7 +644,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Mobile" data-search="gharko sathi app flutter case study: home services with kyc and escrow flutter dart riverpod mobile / case study">
+      <article class="project-card" data-category="Mobile" data-look="color" data-search="gharko sathi app flutter case study: home services with kyc and escrow flutter dart riverpod mobile / case study">
         <a class="shot" href="demos/gharkosathi-app/demo/" aria-label="GharKo Sathi App live demo">
           <img src="assets/gharkosathi-app.png" data-gif="assets/gharkosathi-app.gif" alt="GharKo Sathi App — Flutter case study: home services with KYC and escrow" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -657,7 +665,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Mobile" data-search="bazaar app react native marketplace case study with esewa/khalti checkout react native expo typescript mobile / case study">
+      <article class="project-card" data-category="Mobile" data-look="color" data-search="bazaar app react native marketplace case study with esewa/khalti checkout react native expo typescript mobile / case study">
         <a class="shot" href="demos/bazaar-app/demo/" aria-label="Bazaar App live demo">
           <img src="assets/bazaar-app.png" data-gif="assets/bazaar-app.gif" alt="Bazaar App — React Native marketplace case study with eSewa/Khalti checkout" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>
@@ -678,7 +686,7 @@
         </div>
       </article>
 
-      <article class="project-card" data-category="Developer tools" data-search="synckit offline-first sync engine with conflict resolution typescript dart mobile / library">
+      <article class="project-card" data-category="Developer tools" data-look="color" data-search="synckit offline-first sync engine with conflict resolution typescript dart mobile / library">
         <a class="shot" href="demos/sync-kit/demo/" aria-label="SyncKit live demo">
           <img src="assets/sync-kit.png" data-gif="assets/sync-kit.gif" alt="SyncKit — Offline-first sync engine with conflict resolution" loading="lazy" width="1440" height="900" />
           <span class="shot-meta"><span class="badge gold">Live demo ↗</span></span>

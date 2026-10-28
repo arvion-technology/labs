@@ -5,14 +5,16 @@
   const input = document.getElementById("filter-input");
   const empty = document.getElementById("no-results");
   let category = "all";
+  let look = "all";
 
   function apply() {
     const q = (input?.value || "").trim().toLowerCase();
     let visible = 0;
     for (const card of cards) {
       const matchesCategory = category === "all" || card.dataset.category === category;
+      const matchesLook = look === "all" || card.dataset.look === look;
       const matchesText = !q || card.dataset.search.includes(q);
-      const show = matchesCategory && matchesText;
+      const show = matchesCategory && matchesLook && matchesText;
       card.hidden = !show;
       if (show) visible++;
     }
@@ -24,6 +26,11 @@
     apply();
   }));
   input?.addEventListener("input", apply);
+  document.querySelectorAll("[data-look-filter]").forEach((b) => b.addEventListener("click", () => {
+    look = b.dataset.lookFilter;
+    document.querySelectorAll("[data-look-filter]").forEach((x) => x.classList.toggle("active", x === b));
+    apply();
+  }));
 
   // show the recorded demo on hover (loaded lazily, once)
   for (const img of document.querySelectorAll("img[data-gif]")) {

@@ -49,6 +49,8 @@ main { position: relative; z-index: 1; }
 }
 .filter:hover { border-color: var(--gold-line); color: var(--gold); }
 .filter.active { background: var(--gold-soft); border-color: var(--gold-line); color: var(--gold); }
+.palette-filters { margin-top: -14px; align-items: center; }
+.filter-label { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 22px; }
 .project-card {
   border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
