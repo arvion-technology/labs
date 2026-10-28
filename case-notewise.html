@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>notewise — case study — Arvion Technologies</title>
+<meta name="description" content="A case study from Arvion Technologies, Kathmandu: problem, build, architecture and the decisions behind it." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="labs.css" />
+<link rel="stylesheet" href="company.css" />
+</head>
+<body>
+<div class="aurora"></div><div class="grid-lines"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark-svg"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
+  </a>
+  <span class="spacer"></span>
+  <a class="nav-link" href="index.html#projects">Projects</a>
+  <a class="nav-link on" href="work.html">Work</a>
+  <a class="nav-link" href="company.html">Company</a>
+  <a class="nav-link" href="brand.html">Brand</a>
+  <a class="btn sm primary" href="https://arviontech.net" target="_blank" rel="noopener">arviontech.net ↗</a>
+</header>
+<main>
+<section class="page-hero case-hero">
+  <div>
+    <div class="eyebrow">Product sample · Documents</div>
+    <h1>Notewise</h1>
+    <p class="page-lede">A block editor: slash commands, nested blocks, drag reorder, coalesced undo and clean Markdown import/export. The block tree is a real data structure, not contenteditable soup.</p>
+    <div class="row wrap" style="margin-top:22px;gap:12px">
+      <a class="btn primary" href="https://arvion-technology.github.io/labs/demos/notewise/demo/" target="_blank" rel="noopener">Open the live demo ↗</a>
+      <a class="btn" href="work.html">Back to company profile</a>
+    </div>
+    <div class="facts">
+      <div><b>8 types</b><span>blocks</span></div><div><b>62</b><span>tests</span></div><div><b>0</b><span>deps</span></div><div><b>Markdown</b><span>export</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="window"><div class="window-bar"><i></i><i></i><i></i><span>live demo</span></div><img src="assets/notewise.png" alt="Notewise" /></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="case-columns">
+    <div>
+      <div class="eyebrow">The problem</div>
+      <h2>Contenteditable is not an editor.</h2>
+      <p>Writing tools live or die on structure. Browsers give you a contenteditable div and a pile of edge cases; everything else — nesting, reordering, undo that feels right, a Markdown round-trip — has to be designed.</p><p>Notewise models the document as a tree of typed blocks and renders it, so every operation is explicit and testable.</p>
+    </div>
+    <div>
+      <div class="eyebrow">What we built</div>
+      <h2>A block tree you can test.</h2>
+      <ul class="checklist"><li>Eight block types with insert, split, merge, move and indent operations over a tree.</li><li>Slash menu with keyboard navigation, drag handles and Tab/Shift-Tab nesting.</li><li>Undo/redo that coalesces typing into steps instead of one character at a time.</li><li>Markdown parser and serializer that round-trip the supported blocks.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Architecture</div><h2>How it is put together</h2></div></div>
+  <pre class="arch">ui: sidebar · editor · slash menu · markdown panel
+src/: blocks (tree ops) · markdown codec · history · stats
+persistence: versioned localStorage
+tests: tree edits, markdown round-trip, undo semantics</pre>
+  <div class="case-columns" style="margin-top:26px">
+    <div><h3>Stack</h3><div class="row wrap" style="gap:8px;margin-top:10px"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span><span class="chip">CSS</span></div></div>
+    <div><h3>Security and money</h3><ul class="checklist"><li>Blocks are immutable-ish records addressed by id; operations return a new tree for undo snapshots.</li><li>Typing coalesces on a timer so undo reverses a phrase, not a keystroke.</li><li>Markdown is the export boundary, with unsupported inline emphasis left literal rather than guessed.</li><li>Persistence is versioned so a schema change does not destroy a user's document.</li></ul></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Screens</div><h2>Product surfaces</h2></div></div>
+  <div class="shot-grid">
+    <figure><img src="assets/notewise.png" alt="Notewise — the working demo" /><figcaption>Notewise — the working demo</figcaption></figure>
+  </div>
+</section>
+
+<section class="section tight contact-band">
+  <div><div class="eyebrow">Similar work</div><h2>Building something in this category?</h2>
+  <p class="page-lede">We can walk you through the architecture, the payment integration and the failure cases on a call — including the parts that were hard.</p>
+  <div class="row wrap" style="margin-top:18px;gap:12px"><a class="btn primary" href="mailto:hello@arviontech.net">hello@arviontech.net</a><a class="btn" href="company.html">Company profile</a></div></div>
+</section></main>
+
+<footer class="footer">
+  <div class="row wrap" style="gap:18px">
+    <span class="brand-mark-svg small"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span>Arvion Technologies Pvt. Ltd. · Tinkune, Kathmandu, Nepal</span>
+    <span class="spacer"></span>
+    <a href="index.html">Labs</a>
+    <a href="work.html">Work</a>
+    <a href="company.html">Company</a>
+    <a href="brand.html">Brand</a>
+    <a href="build-log.html">Build log</a>
+    <a href="https://github.com/arvion-technology">GitHub</a>
+    <a href="mailto:hello@arviontech.net">Email</a>
+  </div>
+  <p class="small muted" style="margin:14px 0 0">All projects MIT licensed. Demos are static and run in your browser; no analytics are collected here.</p>
+</footer>
+</body></html>

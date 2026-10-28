@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>storefront — case study — Arvion Technologies</title>
+<meta name="description" content="A case study from Arvion Technologies, Kathmandu: problem, build, architecture and the decisions behind it." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="labs.css" />
+<link rel="stylesheet" href="company.css" />
+</head>
+<body>
+<div class="aurora"></div><div class="grid-lines"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark-svg"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
+  </a>
+  <span class="spacer"></span>
+  <a class="nav-link" href="index.html#projects">Projects</a>
+  <a class="nav-link on" href="work.html">Work</a>
+  <a class="nav-link" href="company.html">Company</a>
+  <a class="nav-link" href="brand.html">Brand</a>
+  <a class="btn sm primary" href="https://arviontech.net" target="_blank" rel="noopener">arviontech.net ↗</a>
+</header>
+<main>
+<section class="page-hero case-hero">
+  <div>
+    <div class="eyebrow">Product sample · Commerce</div>
+    <h1>Bazaar Store</h1>
+    <p class="page-lede">A storefront and back office in one page: catalogue with variants, cart pricing with promos and shipping, checkout with COD/eSewa/Khalti adapters, an order state machine and inventory that reserves and releases stock.</p>
+    <div class="row wrap" style="margin-top:22px;gap:12px">
+      <a class="btn primary" href="https://arvion-technology.github.io/labs/demos/storefront/demo/" target="_blank" rel="noopener">Open the live demo ↗</a>
+      <a class="btn" href="work.html">Back to company profile</a>
+    </div>
+    <div class="facts">
+      <div><b>12</b><span>products</span></div><div><b>24</b><span>variants</span></div><div><b>48</b><span>tests</span></div><div><b>0</b><span>deps</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="window"><div class="window-bar"><i></i><i></i><i></i><span>live demo</span></div><img src="assets/storefront.png" alt="Bazaar Store" /></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="case-columns">
+    <div>
+      <div class="eyebrow">The problem</div>
+      <h2>Commerce breaks at the edges.</h2>
+      <p>A cart is easy. The bugs live at the edges: a discount that must be allocated across lines without losing a paisa, a variant that sells out while the cart is open, an order that cannot move backwards without breaking the ledger.</p><p>Bazaar Store is a small commerce system that takes those edges seriously and tests them.</p>
+    </div>
+    <div>
+      <div class="eyebrow">What we built</div>
+      <h2>Money, stock and state.</h2>
+      <ul class="checklist"><li>Integer-minor-unit pricing with line discounts, promo validation and a shipping threshold.</li><li>Stock that reserves on cart, releases on abandonment and commits on payment.</li><li>An order state machine with legal transitions for pack, ship, deliver, cancel and refund.</li><li>Back office with revenue, low-stock alerts, inventory adjustment and an order desk.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Architecture</div><h2>How it is put together</h2></div></div>
+  <pre class="arch">storefront demo
+ ├─ catalogue / product / cart / checkout (buyer)
+ ├─ admin: orders, inventory, revenue (operator)
+ └─ src/: money, promos, cart pricing, inventory,
+          order state machine, payment adapters, revenue
+localStorage persistence · node:test for every module</pre>
+  <div class="case-columns" style="margin-top:26px">
+    <div><h3>Stack</h3><div class="row wrap" style="gap:8px;margin-top:10px"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span><span class="chip">CSS</span></div></div>
+    <div><h3>Security and money</h3><ul class="checklist"><li>Discounts are allocated with largest-remainder so line totals sum exactly to the discounted total.</li><li>Stock reservation is explicit (reserve/release/commit) rather than a single decrement.</li><li>Payment adapters share one interface; the mock rail records a verifiable transaction id.</li><li>Illegal order transitions are rejected by the state machine, not by button visibility.</li></ul></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Screens</div><h2>Product surfaces</h2></div></div>
+  <div class="shot-grid">
+    <figure><img src="assets/storefront.png" alt="Bazaar Store — the working demo" /><figcaption>Bazaar Store — the working demo</figcaption></figure>
+  </div>
+</section>
+
+<section class="section tight contact-band">
+  <div><div class="eyebrow">Similar work</div><h2>Building something in this category?</h2>
+  <p class="page-lede">We can walk you through the architecture, the payment integration and the failure cases on a call — including the parts that were hard.</p>
+  <div class="row wrap" style="margin-top:18px;gap:12px"><a class="btn primary" href="mailto:hello@arviontech.net">hello@arviontech.net</a><a class="btn" href="company.html">Company profile</a></div></div>
+</section></main>
+
+<footer class="footer">
+  <div class="row wrap" style="gap:18px">
+    <span class="brand-mark-svg small"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span>Arvion Technologies Pvt. Ltd. · Tinkune, Kathmandu, Nepal</span>
+    <span class="spacer"></span>
+    <a href="index.html">Labs</a>
+    <a href="work.html">Work</a>
+    <a href="company.html">Company</a>
+    <a href="brand.html">Brand</a>
+    <a href="build-log.html">Build log</a>
+    <a href="https://github.com/arvion-technology">GitHub</a>
+    <a href="mailto:hello@arviontech.net">Email</a>
+  </div>
+  <p class="small muted" style="margin:14px 0 0">All projects MIT licensed. Demos are static and run in your browser; no analytics are collected here.</p>
+</footer>
+</body></html>
