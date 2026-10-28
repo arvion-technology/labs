@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Company — Arvion Technologies</title>
+<meta name="description" content="Arvion Technologies is a product engineering studio in Kathmandu, Nepal. Web platforms, mobile apps, APIs, cloud, payments and AI features, end to end." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="labs.css" />
+<link rel="stylesheet" href="company.css" />
+</head>
+<body>
+<div class="aurora"></div><div class="grid-lines"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark-svg"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
+  </a>
+  <span class="spacer"></span>
+  <a class="nav-link" href="index.html#projects">Projects</a>
+  <a class="nav-link" href="company.html#work">Client work</a>
+  <a class="nav-link on" href="company.html">Company</a>
+  <a class="nav-link" href="brand.html">Brand</a>
+  <a class="btn sm primary" href="https://arviontech.net" target="_blank" rel="noopener">arviontech.net ↗</a>
+</header>
+<main>
+<section class="page-hero">
+  <div>
+    <div class="eyebrow">Company profile</div>
+    <h1>A product engineering studio in Kathmandu.</h1>
+    <p class="page-lede">We design, build and ship software end to end: web platforms, mobile apps, APIs, cloud and the payment rails that connect them. Small senior team, no hand-offs between design, backend and release. We publish our work so you can judge it before you hire us.</p>
+    <div class="row wrap" style="margin-top:26px;gap:12px">
+      <a class="btn primary lg" href="assets/arvion-company-profile.pdf" download>Download the company profile (PDF)</a>
+      <a class="btn lg" href="mailto:hello@arviontech.net?subject=Project%20enquiry">Start a project</a>
+    </div>
+    <div class="facts">
+      <div><b>34</b><span>open-source projects</span></div>
+      <div><b>21</b><span>flagship builds</span></div>
+      <div><b>1,200+</b><span>automated tests</span></div>
+      <div><b>2</b><span>products in production</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="window"><div class="window-bar"><i></i><i></i><i></i><span>gharkosewa.com — live</span></div><img src="assets/clients/gharkosewa.png" alt="GharKo Sathi" /></div>
+    <div class="window thin"><div class="window-bar"><i></i><i></i><i></i><span>hamrosajhabazaar.com — live</span></div><img src="assets/clients/hamro.png" alt="Hamro Sajha Bazaar" /></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Services</h2></div></div>
+  <div class="service-grid">
+    <div class="card service"><h3>Web platforms</h3><p>Product and marketplace front ends, dashboards, admin tools. React, Next.js, Vue, server-rendered where it matters, with the API behind it.</p></div>
+    <div class="card service"><h3>Mobile apps</h3><p>Flutter and React Native from the first screen to store release: offline-first data, payments, push, deep links, KYC flows.</p></div>
+    <div class="card service"><h3>APIs and backend</h3><p>NestJS, Node, Python, PostgreSQL, Redis, queues and background jobs. Designed to be operated, not just deployed.</p></div>
+    <div class="card service"><h3>Cloud and delivery</h3><p>AWS and GCP, Docker, Kubernetes, CI/CD, observability, cost control and runbooks for the on-call shift.</p></div>
+    <div class="card service"><h3>Payments and integrations</h3><p>eSewa, Khalti, Stripe, Razorpay, SMS/OTP, KYC providers, ERP and CRM integrations with server-to-server verification.</p></div>
+    <div class="card service"><h3>AI features</h3><p>Retrieval over your own documents, extraction, drafting and evaluation harnesses — with an honest fallback when the model is unavailable.</p></div>
+  </div>
+</section>
+
+<section class="section tight" id="work">
+  <div class="section-head"><div><div class="eyebrow">In production</div><h2>Client work</h2></div><span class="spacer"></span><span class="small muted">Live products we built and operate</span></div>
+  <div class="case-grid">
+    <a class="case-card" href="case-gharkosathi.html">
+      <img src="assets/clients/gharkosewa.png" alt="GharKo Sathi homepage" />
+      <div class="case-body">
+        <span class="work-tag">Home services · Nepal</span>
+        <h3>GharKo Sathi</h3>
+        <p>KYC-verified home services with escrow payments and dispute resolution. Customer app, partner app and admin, live on iOS and Android.</p>
+        <span class="case-link">Read the case study →</span>
+      </div>
+    </a>
+    <a class="case-card" href="case-bazaar.html">
+      <img src="assets/clients/hamro.png" alt="Hamro Sajha Bazaar homepage" />
+      <div class="case-body">
+        <span class="work-tag">Marketplace · Nepal</span>
+        <h3>Hamro Sajha Bazaar</h3>
+        <p>Nine-category national marketplace with seller verification, escrow and buyer protection, bilingual UI and eSewa/Khalti checkout.</p>
+        <span class="case-link">Read the case study →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Open source</div><h2>How we work under the hood</h2></div></div>
+  <p class="page-lede" style="margin-bottom:22px">Every repository in <a href="index.html">Labs</a> is a working product sample with tests, CI and an honest README. It is the fastest way to see how we structure code before you commission any.</p>
+  <div class="quote-grid">
+    
+    <a class="quote" href="demos/pulse/demo/">
+      <img src="assets/pulse.png" alt="Pulse" />
+      <b>Pulse</b><span>Self-hosted product analytics with funnels, retention and cohorts</span>
+    </a>
+    <a class="quote" href="demos/invoiceflow/demo/">
+      <img src="assets/invoiceflow.png" alt="InvoiceFlow" />
+      <b>InvoiceFlow</b><span>Invoicing and billing for agencies and freelancers</span>
+    </a>
+    <a class="quote" href="demos/queuekit/demo/">
+      <img src="assets/queuekit.png" alt="QueueKit" />
+      <b>QueueKit</b><span>Durable background jobs with retries, backoff and a dashboard</span>
+    </a>
+    <a class="quote" href="demos/design-system/demo/">
+      <img src="assets/design-system.png" alt="Arvion UI" />
+      <b>Arvion UI</b><span>A design system with tokens, 30 components and live docs</span>
+    </a>
+    <a class="quote" href="demos/notewise/demo/">
+      <img src="assets/notewise.png" alt="Notewise" />
+      <b>Notewise</b><span>A block editor with slash commands and Markdown interop</span>
+    </a>
+    <a class="quote" href="demos/whiteboard/demo/">
+      <img src="assets/whiteboard.png" alt="Canvas" />
+      <b>Canvas</b><span>Infinite collaborative whiteboard with live cursors</span>
+    </a>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Process</div><h2>How an engagement runs</h2></div></div>
+  <div class="steps">
+    <div class="step"><span class="step-n">01</span><h3>Discovery</h3><p>Two weeks, fixed price. We map the business flow, the data, the integrations and the risk before writing production code.</p></div>
+    <div class="step"><span class="step-n">02</span><h3>Architecture</h3><p>A written architecture note you keep: system diagram, data model, failure modes, deployment and the decisions we expect to revisit.</p></div>
+    <div class="step"><span class="step-n">03</span><h3>Build in slices</h3><p>Working software every week, behind a demo link. You can use it, and change your mind, before the scope hardens.</p></div>
+    <div class="step"><span class="step-n">04</span><h3>Harden</h3><p>Tests, CI, security review, load checks, error handling, backups and the runbook. This is the part clients underestimate.</p></div>
+    <div class="step"><span class="step-n">05</span><h3>Launch and operate</h3><p>Store release or deployment, monitoring, a handover session and a maintenance window if you want us to stay on.</p></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Engagement models</div><h2>Three ways to work with us</h2></div></div>
+  <div class="service-grid">
+    <div class="card service"><h3>Fixed-scope project</h3><p>You have a defined product and a deadline. We scope it, commit to a price and ship it. Best for new products and well-understood rebuilds.</p><span class="tag">from 6 weeks</span></div>
+    <div class="card service"><h3>Team extension</h3><p>You have a product team and need senior engineers who can own a surface end to end. Monthly, with a clear scope and weekly demo.</p><span class="tag">monthly</span></div>
+    <div class="card service"><h3>Rescue and audit</h3><p>The product shipped but cannot be operated: failing releases, security findings, no tests. We audit, stabilise and hand back a runbook.</p><span class="tag">2–6 weeks</span></div>
+  </div>
+</section>
+
+<section class="section tight contact-band">
+  <div>
+    <div class="eyebrow">Contact</div>
+    <h2>Tell us what you are building.</h2>
+    <p class="page-lede">We reply to every message, usually within one business day. If it is not a fit, we will say so and point you somewhere better.</p>
+    <div class="row wrap" style="margin-top:20px;gap:12px">
+      <a class="btn primary" href="mailto:hello@arviontech.net">hello@arviontech.net</a>
+      <a class="btn" href="https://arviontech.net/contact" target="_blank" rel="noopener">Contact form ↗</a>
+      <a class="btn" href="assets/arvion-company-profile.pdf" download>Company profile (PDF)</a>
+    </div>
+  </div>
+  <div class="contact-facts">
+    <p><b>Arvion Technologies Pvt. Ltd.</b><br />Ward No. 32, Tinkune<br />Kathmandu Metropolitan City<br />Kathmandu, Nepal</p>
+    <p class="small muted">PAN 6236009191<br />arviontech.net<br />hello@arviontech.net</p>
+  </div>
+</section></main>
+
+<footer class="footer">
+  <div class="row wrap" style="gap:18px">
+    <span class="brand-mark-svg small"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span>Arvion Technologies Pvt. Ltd. · Tinkune, Kathmandu, Nepal</span>
+    <span class="spacer"></span>
+    <a href="index.html">Labs</a>
+    <a href="company.html">Company</a>
+    <a href="brand.html">Brand</a>
+    <a href="build-log.html">Build log</a>
+    <a href="https://github.com/arvion-technology">GitHub</a>
+    <a href="mailto:hello@arviontech.net">Email</a>
+  </div>
+  <p class="small muted" style="margin:14px 0 0">All projects MIT licensed. Demos are static and run in your browser; no analytics are collected here.</p>
+</footer>
+</body></html>

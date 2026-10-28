@@ -102,7 +102,16 @@ export function selectionBounds(scene, ids) {
 export function selectionInfo(scene, ids) {
   const selected = new Set(ids);
   const shapes = scene.shapes.filter((shape) => selected.has(shape.id));
-  const boxes = shapes.filter((s) => s.type !== "connector").map(shapeBounds);
+  const byId = shapesById(scene);
+  const boxes = [];
+  for (const shape of shapes) {
+    if (shape.type === "connector") {
+      const geom = connectorGeometry(shape, byId);
+      if (geom) boxes.push(geom.bounds);
+    } else {
+      boxes.push(shapeBounds(shape));
+    }
+  }
   return {
     count: shapes.length,
     shapes,

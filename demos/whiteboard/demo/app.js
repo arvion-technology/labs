@@ -1466,7 +1466,7 @@ function relativeTime(at) {
 function renderActivity() {
   if (!dom.activity) return;
   dom.activityCount.textContent = String(state.activity.length);
-  dom.activity.innerHTML = state.activity.slice(0, 4).map((item) => `
+  dom.activity.innerHTML = state.activity.slice(0, 3).map((item) => `
     <div class="activity-item">
       <span class="activity-dot" style="background:${item.color}"></span>
       <div>

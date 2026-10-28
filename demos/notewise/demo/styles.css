@@ -791,7 +791,7 @@ body {
   position: fixed;
   z-index: 80;
   width: 336px;
-  max-height: min(440px, calc(100vh - 96px));
+  max-height: min(360px, calc(100vh - 96px));
   overflow: auto;
   background: #fff;
   border: 1px solid var(--line-strong);

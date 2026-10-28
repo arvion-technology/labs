@@ -1,41 +1,77 @@
 [
   {
-    "wait": 1000
+    "wait": 1600
   },
   {
-    "click": "#new-page"
+    "click": ".page-item[data-page-id='p-field-notes']"
+  },
+  {
+    "wait": 900
+  },
+  {
+    "eval": "notewise.focusBlockByIndex(1)"
+  },
+  {
+    "wait": 400
+  },
+  {
+    "eval": "notewise.addBlock()"
+  },
+  {
+    "wait": 400
+  },
+  {
+    "eval": "notewise.type('Patan, before the shutters open', 16)"
   },
   {
     "wait": 800
   },
   {
-    "scroll": 180
+    "eval": "notewise.openSlash()"
   },
   {
-    "wait": 500
+    "wait": 1200
+  },
+  {
+    "key": "ArrowDown"
+  },
+  {
+    "wait": 600
+  },
+  {
+    "key": "Enter"
+  },
+  {
+    "wait": 950
+  },
+  {
+    "eval": "notewise.focusBlockByIndex(5)"
+  },
+  {
+    "wait": 450
+  },
+  {
+    "key": "Tab"
+  },
+  {
+    "wait": 1500
+  },
+  {
+    "click": "#undo"
+  },
+  {
+    "wait": 1100
   },
   {
     "click": "#open-markdown"
   },
   {
-    "wait": 800
+    "wait": 1900
   },
   {
-    "scroll": 180
+    "eval": "(() => { const t = document.querySelector('#md-output'); if (t) t.scrollTop = 200; return true; })()"
   },
   {
-    "wait": 500
-  },
-  {
-    "scroll": 300
-  },
-  {
-    "wait": 700
-  },
-  {
-    "scroll": -200
-  },
-  {
-    "wait": 600
+    "wait": 1400
   }
 ]

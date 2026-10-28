@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GharKo Sathi — case study — Arvion Technologies</title>
+<meta name="description" content="How we built a KYC-verified home services platform with escrow payments, dispute resolution and partner apps in Nepal." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="labs.css" />
+<link rel="stylesheet" href="company.css" />
+</head>
+<body>
+<div class="aurora"></div><div class="grid-lines"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark-svg"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
+  </a>
+  <span class="spacer"></span>
+  <a class="nav-link" href="index.html#projects">Projects</a>
+  <a class="nav-link on" href="company.html#work">Client work</a>
+  <a class="nav-link" href="company.html">Company</a>
+  <a class="nav-link" href="brand.html">Brand</a>
+  <a class="btn sm primary" href="https://arviontech.net" target="_blank" rel="noopener">arviontech.net ↗</a>
+</header>
+<main>
+<section class="page-hero case-hero">
+  <div>
+    <div class="eyebrow">Case study · Home services</div>
+    <h1>GharKo Sathi</h1>
+    <p class="page-lede">On-demand home services in Kathmandu with KYC-verified professionals, escrow-held payments and a dispute process that both sides can see. Customer app, partner app and an operations console, live on iOS and Android.</p>
+    <div class="row wrap" style="margin-top:22px;gap:12px">
+      <a class="btn primary" href="https://gharkosewa.com" target="_blank" rel="noopener">Visit gharkosewa.com ↗</a>
+      <a class="btn" href="company.html">Back to company profile</a>
+    </div>
+    <div class="facts">
+      <div><b>6</b><span>services</span></div><div><b>ID verified</b><span>KYC</span></div><div><b>escrow</b><span>payments</span></div><div><b>iOS · Android · web</b><span>platforms</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="window"><div class="window-bar"><i></i><i></i><i></i><span>gharkosewa.com</span></div><img src="assets/clients/gharkosewa.png" alt="GharKo Sathi" /></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="case-columns">
+    <div>
+      <div class="eyebrow">The problem</div>
+      <h2>Trust was the product.</h2>
+      <p>Booking a plumber or a mason in Kathmandu usually means a phone number from a neighbour and a cash negotiation at the door. If the work is bad, there is no record, no recourse and no way to check who entered the house.</p><p>The product had to solve trust before it could solve scheduling: prove who the professional is, hold the money until the job is accepted, and give both sides a paper trail when something goes wrong.</p>
+    </div>
+    <div>
+      <div class="eyebrow">What we built</div>
+      <h2>Two apps, one operations console.</h2>
+      <ul class="checklist"><li>Customer flow: service selection, transparent estimate, KYC-matched professional, live job tracking and escrow release on completion.</li><li>Partner app: onboarding with document capture, KYC review states, job offers, earnings and payout history.</li><li>Operations console: KYC queue, live jobs, dispute dashboard, refunds and city/service configuration.</li><li>Dispute path with evidence upload, a decision record and an audit trail attached to the job.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Architecture</div><h2>How it is put together</h2></div></div>
+  <pre class="arch">customer app (Flutter)        partner app (Flutter)
+        │                              │
+        └────────── HTTPS ─────────────┘
+                       │
+              NestJS API (REST, JWT + server-side sessions)
+                 │            │              │
+           PostgreSQL     payment rails    document store
+          (Prisma ORM)   eSewa / Khalti    (KYC, private)
+                 │
+        operations console (React)
+                 │
+        notifications: SMS + push</pre>
+  <div class="case-columns" style="margin-top:26px">
+    <div><h3>Stack</h3><div class="row wrap" style="gap:8px;margin-top:10px"><span class="chip">Flutter</span><span class="chip">React</span><span class="chip">NestJS</span><span class="chip">PostgreSQL</span><span class="chip">Prisma</span><span class="chip">eSewa</span><span class="chip">Khalti</span><span class="chip">SMS/OTP</span><span class="chip">Docker</span></div></div>
+    <div><h3>Security and money</h3><ul class="checklist"><li>KYC documents are stored outside the public mount and served only through authenticated, authorised endpoints.</li><li>Payments are confirmed server-to-server with the provider before a job is marked paid; the client never decides the amount.</li><li>Sensitive account actions (phone change, payout details, account deletion) require step-up reauthentication.</li><li>Escrow state and dispute decisions are recorded as immutable events, not mutable flags.</li></ul></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Screens</div><h2>Product surfaces</h2></div></div>
+  <div class="shot-grid">
+    <figure><img src="assets/clients/gharkosewa-full.png" alt="Marketing site: service catalogue, trust process and partner onboarding" /><figcaption>Marketing site: service catalogue, trust process and partner onboarding</figcaption></figure>
+  </div>
+</section>
+
+<section class="section tight contact-band">
+  <div><div class="eyebrow">Similar work</div><h2>Building something in this category?</h2>
+  <p class="page-lede">We can walk you through the architecture, the payment integration and the failure cases on a call — including the parts that were hard.</p>
+  <div class="row wrap" style="margin-top:18px;gap:12px"><a class="btn primary" href="mailto:hello@arviontech.net">hello@arviontech.net</a><a class="btn" href="company.html">Company profile</a></div></div>
+</section></main>
+
+<footer class="footer">
+  <div class="row wrap" style="gap:18px">
+    <span class="brand-mark-svg small"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 9 L91 91 H73 L50 52 L27 91 H9 Z" fill="currentColor"/><circle cx="50" cy="31" r="6.6" fill="var(--mark-cut, #0b0f1a)"/><path d="M50 52 L67 90 H33 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span>Arvion Technologies Pvt. Ltd. · Tinkune, Kathmandu, Nepal</span>
+    <span class="spacer"></span>
+    <a href="index.html">Labs</a>
+    <a href="company.html">Company</a>
+    <a href="brand.html">Brand</a>
+    <a href="build-log.html">Build log</a>
+    <a href="https://github.com/arvion-technology">GitHub</a>
+    <a href="mailto:hello@arviontech.net">Email</a>
+  </div>
+  <p class="small muted" style="margin:14px 0 0">All projects MIT licensed. Demos are static and run in your browser; no analytics are collected here.</p>
+</footer>
+</body></html>

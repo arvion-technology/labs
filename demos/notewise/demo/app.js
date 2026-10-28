@@ -713,6 +713,8 @@ function renderSlashMenu(anchor) {
 
   slashMenu.hidden = false;
   positionSlashMenu(anchor);
+  const selected = slashMenu.querySelector(".slash-option.is-selected");
+  if (selected) selected.scrollIntoView({ block: "nearest" });
 }
 
 function closeSlash() {

@@ -629,3 +629,47 @@ pre.code .tok-c { color: #5f6c80; } pre.code .tok-n { color: #f5c26b; }
 .theme-paper .topbar, .theme-sand .topbar, .theme-ink .topbar { background: color-mix(in srgb, var(--bg) 82%, transparent); }
 .theme-paper pre.code, .theme-sand pre.code, .theme-ink pre.code { background: #f4f1ea; color: #2a251c; border-color: var(--line-strong); }
 .theme-paper kbd, .theme-sand kbd, .theme-ink kbd { background: #fff; }
+
+/* citrus — light cream with orange (commerce screens) */
+.theme-citrus {
+  --bg: #fff8ee; --bg-soft: #ffefd9; --surface: #ffffff; --surface-2: #fffaf2; --surface-3: #ffedd6;
+  --line: rgba(60, 35, 10, 0.12); --line-strong: rgba(60, 35, 10, 0.22);
+  --text: #201408; --text-2: #43301c; --muted: #866b4f;
+  --gold: #d9631e; --gold-soft: rgba(217, 99, 30, 0.1); --gold-line: rgba(217, 99, 30, 0.32);
+  --blue: #1f6f6b; --blue-soft: rgba(31, 111, 107, 0.1);
+  --green: #2f7d4f; --green-soft: rgba(47, 125, 79, 0.1);
+  --red: #b3311f; --red-soft: rgba(179, 49, 31, 0.1);
+  --amber: #a87718; --purple: #7a4b8a;
+}
+.theme-citrus .aurora { background: radial-gradient(760px 440px at 12% -10%, rgba(217, 99, 30, 0.14), transparent 65%), radial-gradient(820px 520px at 90% -12%, rgba(31, 111, 107, 0.1), transparent 68%); }
+.theme-citrus .grid-lines { background-image: linear-gradient(to right, rgba(60,35,10,.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(60,35,10,.05) 1px, transparent 1px); }
+.theme-citrus .sidebar { background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,244,228,.5)); }
+.theme-citrus .nav-item:hover, .theme-citrus .btn:hover { background: rgba(0,0,0,.045); }
+.theme-citrus .btn.primary { --btn-bg: linear-gradient(180deg, #f07a2e, #d9631e); --btn-fg: #fff; --btn-bd: #b84f13; box-shadow: 0 10px 24px -14px rgba(217,99,30,.55); }
+.theme-citrus .input, .theme-citrus .select, .theme-citrus .textarea { background: #fff; color: var(--text); }
+.theme-citrus .badge { background: rgba(0,0,0,.035); }
+.theme-citrus .tabs { background: rgba(0,0,0,.04); } .theme-citrus .tab.active { background: #fff; color: var(--text); }
+.theme-citrus .demo-banner { background: rgba(255,255,255,.93); border-color: var(--line-strong); color: var(--muted); }
+.theme-citrus pre.code { background: #fff4e5; color: #3a2712; }
+
+/* azure — light blue-grey with cobalt (support and data screens) */
+.theme-azure {
+  --bg: #f2f6fb; --bg-soft: #e7eef8; --surface: #ffffff; --surface-2: #f7fafe; --surface-3: #e9f0f9;
+  --line: rgba(17, 34, 58, 0.12); --line-strong: rgba(17, 34, 58, 0.22);
+  --text: #0d1a2b; --text-2: #2c3f57; --muted: #5f7389;
+  --gold: #1f5fbf; --gold-soft: rgba(31, 95, 191, 0.1); --gold-line: rgba(31, 95, 191, 0.3);
+  --blue: #0f766e; --blue-soft: rgba(15, 118, 110, 0.1);
+  --green: #1a7f5a; --green-soft: rgba(26, 127, 90, 0.1);
+  --red: #b33636; --red-soft: rgba(179, 54, 54, 0.1);
+  --amber: #9a6b12; --purple: #6d4ea8;
+}
+.theme-azure .aurora { background: radial-gradient(760px 440px at 14% -10%, rgba(31, 95, 191, 0.12), transparent 65%), radial-gradient(820px 520px at 90% -12%, rgba(15, 118, 110, 0.1), transparent 68%); }
+.theme-azure .grid-lines { background-image: linear-gradient(to right, rgba(17,34,58,.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,34,58,.05) 1px, transparent 1px); }
+.theme-azure .sidebar { background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(235,242,251,.5)); }
+.theme-azure .nav-item:hover, .theme-azure .btn:hover { background: rgba(0,0,0,.045); }
+.theme-azure .btn.primary { --btn-bg: linear-gradient(180deg, #2f74d6, #1f5fbf); --btn-fg: #fff; --btn-bd: #174a96; box-shadow: 0 10px 24px -14px rgba(31,95,191,.55); }
+.theme-azure .input, .theme-azure .select, .theme-azure .textarea { background: #fff; color: var(--text); }
+.theme-azure .badge { background: rgba(0,0,0,.035); }
+.theme-azure .tabs { background: rgba(0,0,0,.04); } .theme-azure .tab.active { background: #fff; color: var(--text); }
+.theme-azure .demo-banner { background: rgba(255,255,255,.93); border-color: var(--line-strong); color: var(--muted); }
+.theme-azure pre.code { background: #eef4fc; color: #23324a; }
