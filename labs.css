@@ -85,6 +85,14 @@ main { position: relative; z-index: 1; }
 .work-card h3 { font-size: 24px; margin: 10px 0 8px; }
 .work-card p { color: var(--muted); font-size: 13.5px; }
 .work-link { font-size: 13px; font-weight: 600; color: var(--text); }
+.company-strip { padding-top: clamp(20px, 3vw, 40px); }
+.company-card { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: 30px; border: 1px solid var(--line); border-radius: 22px; padding: clamp(24px, 4vw, 44px); background: linear-gradient(150deg, rgba(245,194,107,.08), transparent 55%), var(--surface); }
+.company-card h2 { font-size: clamp(24px, 2.8vw, 36px); margin: 6px 0 10px; }
+.company-card p { color: var(--muted); max-width: 62ch; }
+.company-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-content: center; }
+.company-facts b { display: block; font-family: var(--font-display); font-size: clamp(24px, 2.4vw, 34px); font-weight: 600; letter-spacing: -.02em; }
+.company-facts span { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 900px) { .company-card { grid-template-columns: 1fr; } }
 .about { border-top: 1px solid var(--line); }
 .about h2 { font-size: clamp(26px, 3vw, 38px); max-width: 20ch; }
 .about p { max-width: 72ch; }
