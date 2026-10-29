@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>atlas, case study, Arvion Technologies</title>
+<meta name="description" content="A case study from Arvion Technologies, Kathmandu: problem, build, architecture and the decisions behind it." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="labs.css" />
+<link rel="stylesheet" href="company.css" />
+</head>
+<body>
+<div class="aurora"></div><div class="grid-lines"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark-svg"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6 L94 94 H62 L50 68 L38 94 H6 Z" fill="currentColor"/><path d="M50 6 L94 94 H62 L50 68 Z" fill="currentColor" opacity=".72"/><path d="M50 40 L60 62 H40 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span><span class="brand-word">ARVION <b>/</b> LABS</span><span class="brand-sub" style="display:block">Open source</span></span>
+  </a>
+  <span class="spacer"></span>
+  <a class="nav-link" href="index.html#projects">Projects</a>
+  <a class="nav-link on" href="work.html">Work</a>
+  <a class="nav-link" href="company.html">Company</a>
+  <a class="nav-link" href="brand.html">Brand</a>
+  <a class="btn sm primary" href="https://arviontech.net" target="_blank" rel="noopener">arviontech.net ↗</a>
+</header>
+<main>
+<section class="page-hero case-hero">
+  <div>
+    <div class="eyebrow">Product sample · Next.js</div>
+    <h1>Atlas Portal</h1>
+    <p class="page-lede">A customer portal in Next.js 15: server components stream the dashboard, invoices and tickets have their own routes, and the data layer is typed route handlers and server modules. The production build is exported static and served as the demo.</p>
+    <div class="row wrap" style="margin-top:22px;gap:12px">
+      <a class="btn primary" href="https://arvion-technology.github.io/labs/demos/atlas-portal/demo/" target="_blank" rel="noopener">Open the live demo ↗</a>
+      <a class="btn" href="work.html">Back to company profile</a>
+    </div>
+    <div class="facts">
+      <div><b>Next.js 15</b><span>framework</span></div><div><b>React 19</b><span>runtime</span></div><div><b>3 suites</b><span>tests</span></div><div><b>static</b><span>export</span></div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="window"><div class="window-bar"><i></i><i></i><i></i><span>live demo</span></div><img src="assets/atlas-portal.png" alt="Atlas Portal" /></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="case-columns">
+    <div>
+      <div class="eyebrow">The problem</div>
+      <h2>A portal that is mostly server work.</h2>
+      <p>A customer portal is read-heavy: dashboards, invoice lists, ticket threads, account settings. The interesting engineering is not the chrome, it is where the data is fetched, how much ships to the browser, and what happens on a slow connection.</p><p>The sample is built to show the Next.js answer to that: server components for reads, route handlers for mutations, and a static export so the whole thing can be inspected on GitHub Pages without a server.</p>
+    </div>
+    <div>
+      <div class="eyebrow">What we built</div>
+      <h2>Server first, client only where it pays.</h2>
+      <ul class="checklist"><li>Dashboard rendered as a server component with metrics computed on the server.</li><li>Invoices list and detail routes, with typed access through lib/ data modules.</li><li>Support tickets with a reply thread, using route handlers for the write path.</li><li>Account settings with a session mock and a shared layout.</li><li>Static export with relative asset paths, so the demo runs from a plain file server.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Architecture</div><h2>How it is put together</h2></div></div>
+  <pre class="arch">app/
+ ├─ layout.tsx, page.tsx (dashboard, server component)
+ ├─ invoices/ (list, detail)
+ ├─ tickets/ (list, thread)
+ ├─ settings/
+ └─ api/ route handlers (typed JSON)
+lib/ typed data access and formatting
+test/ node:test on the data and formatting layer
+out/ static export, copied to demo/</pre>
+  <div class="case-columns" style="margin-top:26px">
+    <div><h3>Stack</h3><div class="row wrap" style="gap:8px;margin-top:10px"><span class="chip">Next.js 15</span><span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">App Router</span></div></div>
+    <div><h3>Security and money</h3><ul class="checklist"><li>Reads happen on the server; only the components that need interaction are client components.</li><li>Route handlers validate input and return typed payloads, so the client never assembles business objects.</li><li>The static export is a real build artifact, not a mock; the demo is that artifact with relative paths.</li><li>Tests cover the data and formatting modules, the parts most likely to drift between server and client.</li></ul></div>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="section-head"><div><div class="eyebrow">Screens</div><h2>Product surfaces</h2></div></div>
+  <div class="shot-grid">
+    <figure><img src="assets/atlas-portal.png" alt="Atlas Portal, the working demo" /><figcaption>Atlas Portal, the working demo</figcaption></figure>
+  </div>
+</section>
+
+<section class="section tight contact-band">
+  <div><div class="eyebrow">Similar work</div><h2>Building something in this category?</h2>
+  <p class="page-lede">We can walk you through the architecture, the payment integration and the failure cases on a call, including the parts that were hard.</p>
+  <div class="row wrap" style="margin-top:18px;gap:12px"><a class="btn primary" href="mailto:hello@arviontech.net">hello@arviontech.net</a><a class="btn" href="company.html">Company profile</a></div></div>
+</section></main>
+
+<footer class="footer">
+  <div class="row wrap" style="gap:18px">
+    <span class="brand-mark-svg small"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6 L94 94 H62 L50 68 L38 94 H6 Z" fill="currentColor"/><path d="M50 6 L94 94 H62 L50 68 Z" fill="currentColor" opacity=".72"/><path d="M50 40 L60 62 H40 Z" fill="var(--mark-cut, #0b0f1a)"/></svg></span>
+    <span>Arvion Technologies Pvt. Ltd. · Tinkune, Kathmandu, Nepal</span>
+    <span class="spacer"></span>
+    <a href="index.html">Labs</a>
+    <a href="work.html">Work</a>
+    <a href="company.html">Company</a>
+    <a href="brand.html">Brand</a>
+    <a href="build-log.html">Build log</a>
+    <a href="https://github.com/arvion-technology">GitHub</a>
+    <a href="mailto:hello@arviontech.net">Email</a>
+  </div>
+  <p class="small muted" style="margin:14px 0 0">All projects MIT licensed. Demos are static and run in your browser; no analytics are collected here.</p>
+</footer>
+</body></html>
