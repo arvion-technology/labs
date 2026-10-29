@@ -27,7 +27,7 @@ export function createCache({ ttlMs = 60_000, now = () => Date.now() } = {}) {
       return { value: entry.value, ageMs: now() - entry.storedAt };
     },
 
-    /** get(), else stale() tagged as stale, else null — the read path the app uses. */
+    /** get(), else stale() tagged as stale, else null, the read path the app uses. */
     read(key) {
       const fresh = this.get(key);
       if (fresh !== null) return { value: fresh, stale: false, ageMs: 0 };

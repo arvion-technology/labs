@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
-  <title>Compose Cookbook — twelve validated Docker Compose stacks</title>
+  <title>Compose Cookbook | twelve validated Docker Compose stacks</title>
   <meta name="description" content="Copy-paste Docker Compose stacks with pinned images, healthchecks, resource limits and .env examples. Validated by a local linter that runs without a Docker daemon." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 9 L91 91 H73 L50 52 L27 91 H9 Z' fill='%23f5c26b'/><circle cx='50' cy='31' r='6.6' fill='%230b0f1a'/><path d='M50 52 L67 90 H33 Z' fill='%230b0f1a'/></svg>" />
   <link rel="stylesheet" href="arvion.css" />
@@ -63,7 +63,7 @@
           <div class="card-head" style="margin-bottom:11px">
             <div><div class="card-title">Topology</div><div class="card-sub" id="topo-sub">services on one bridge network</div></div>
             <span class="spacer"></span>
-            <span class="badge mono" id="topo-network">—</span>
+            <span class="badge mono" id="topo-network">, </span>
           </div>
           <div id="topology" class="topology"></div>
           <div id="service-table" style="margin-top:12px"></div>
@@ -76,7 +76,7 @@
               <button class="tab" data-file="env" role="tab">.env.example</button>
             </div>
             <span class="spacer"></span>
-            <span class="small muted mono" id="file-lines">—</span>
+            <span class="small muted mono" id="file-lines">, </span>
             <button class="btn sm" id="copy-file">Copy</button>
           </div>
           <pre class="yaml" id="yaml-view"></pre>

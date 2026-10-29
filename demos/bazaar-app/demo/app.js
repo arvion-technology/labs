@@ -1,4 +1,4 @@
-// Bazaar App — case-study site.
+// Bazaar App, case-study site.
 // Screen records, money, checkout and filters come from ../src.
 import { LISTINGS, SCREENS, PRODUCT, SELLER, SELLER_ORDERS } from "../src/catalog.js";
 import { formatNPR, quote, settlement, rupees } from "../src/money.js";
@@ -196,7 +196,7 @@ function render() {
   $$("[data-nav]").forEach((link) => link.classList.toggle("active", link.dataset.nav === view));
   if (view === "screens") screensPage(main);
   else overviewPage(main);
-  document.title = `${view === "screens" ? "Screens" : "Case study"} — Hamro Sajha Bazaar`;
+  document.title = `${view === "screens" ? "Screens" : "Case study"}, Hamro Sajha Bazaar`;
   window.scrollTo({ top: 0 });
 }
 

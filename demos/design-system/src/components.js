@@ -1,6 +1,6 @@
 /**
  * Component registry: the single source for the docs site, the search index,
- * and the tests. Snippets are the copyable form — they must be valid, complete
+ * and the tests. Snippets are the copyable form, they must be valid, complete
  * HTML fragments with no build-time templating.
  */
 

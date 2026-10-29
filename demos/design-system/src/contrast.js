@@ -3,7 +3,7 @@
  *
  * Every function here is pure and takes plain values, so the docs site, the
  * tests and any consumer compute the same numbers. Alpha colours are composited
- * over an explicit backdrop — a ratio only exists relative to a background.
+ * over an explicit backdrop, a ratio only exists relative to a background.
  */
 
 const NAMED = { white: "#ffffff", black: "#000000", transparent: "#00000000" };
@@ -150,8 +150,8 @@ export function mix(from, to, steps = 5) {
 }
 
 export function describeRatio(ratio) {
-  if (ratio >= 7) return "Excellent — AAA for body text";
+  if (ratio >= 7) return "Excellent, AAA for body text";
   if (ratio >= 4.5) return "Passes AA for body text";
   if (ratio >= 3) return "Large text and UI only";
-  return "Below 3:1 — do not use for text";
+  return "Below 3:1, do not use for text";
 }

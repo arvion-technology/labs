@@ -1,4 +1,4 @@
-// Landing Kit gallery — the switcher page.
+// Landing Kit gallery, the switcher page.
 // Template metadata, palettes and the framework all come from ../src; this file
 // renders the gallery, scales the live iframes and handles the preview mode.
 import { TEMPLATES, SECTIONS, coverage, omitted, validateAll, sectionName } from "../src/framework.js";

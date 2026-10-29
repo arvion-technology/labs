@@ -1,4 +1,4 @@
-/* Landing Kit — shared behaviour for the six templates.
+/* Landing Kit, shared behaviour for the six templates.
    Theme persistence, mobile nav, scroll state and reveal-on-scroll. No deps. */
 (function () {
   "use strict";

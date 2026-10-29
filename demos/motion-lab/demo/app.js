@@ -1,4 +1,4 @@
-// Motion Lab — gallery and playground.
+// Motion Lab, gallery and playground.
 // The recipe registry, easing maths and snippet builder come from ../src.
 import {
   RECIPES, CATEGORIES, getRecipe, recipesByCategory, buildSnippet, categoryMeta,
@@ -286,7 +286,7 @@ function render() {
   $$("[data-nav]").forEach((link) => link.classList.toggle("active", link.dataset.nav === route.view));
   if (route.view === "playground") playgroundPage(main, route.id);
   else galleryPage(main);
-  document.title = `${route.view === "playground" ? getRecipe(route.id)?.name || "Playground" : "Gallery"} — Motion Lab`;
+  document.title = `${route.view === "playground" ? getRecipe(route.id)?.name || "Playground" : "Gallery"}, Motion Lab`;
   window.scrollTo({ top: 0 });
 }
 

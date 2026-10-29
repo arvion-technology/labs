@@ -1,6 +1,6 @@
 # Arvion Labs
 
-The public gallery at **https://arvion-technology.github.io/labs/** — runnable
+The public gallery at **https://arvion-technology.github.io/labs/**, runnable
 open-source projects from [Arvion Technologies](https://arviontech.net).
 
 Every demo is static: open one, click around, no sign-up or API key. Source lives

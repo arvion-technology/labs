@@ -1,4 +1,4 @@
-/* Arvion Labs — gallery chrome on top of the shared brand tokens. */
+/* Arvion Labs, gallery chrome on top of the shared brand tokens. */
 @import url("arvion.css");
 
 body { background: var(--bg); }

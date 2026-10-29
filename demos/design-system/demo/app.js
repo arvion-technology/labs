@@ -1,4 +1,4 @@
-// Arvion UI — documentation site.
+// Arvion UI, documentation site.
 // Rendering only: tokens, contrast maths, the component registry and search all
 // come from ../src, which is the same code the test suite imports.
 import {
@@ -382,7 +382,7 @@ function spacingPage(main) {
   main.append(viewHead({
     eyebrow: "Foundations · Spacing",
     title: "Spacing",
-    lede: "A 4px base scale with ten steps. If a layout needs 18px, the layout is wrong — pick 16 and let the scale do the alignment work.",
+    lede: "A 4px base scale with ten steps. If a layout needs 18px, the layout is wrong, pick 16 and let the scale do the alignment work.",
   }));
   main.append(el("div", { class: "card", style: "padding:10px 22px" },
     ...SPACING.map((step) => el("div", { class: "space-row" },
@@ -968,7 +968,7 @@ function render() {
   } else if (first === "accessibility") { accessibilityPage(main); title = "Accessibility"; }
   else if (first === "theming") { themingPage(main); title = "Theming"; }
   else notFoundPage(main, `“${first}” is not a docs route.`);
-  document.title = `${title} — Arvion UI`;
+  document.title = `${title}, Arvion UI`;
   window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "instant" });
 }
 

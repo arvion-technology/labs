@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>relay — case study — Arvion Technologies</title>
+<title>relay, case study, Arvion Technologies</title>
 <meta name="description" content="A case study from Arvion Technologies, Kathmandu: problem, build, architecture and the decisions behind it." />
 <meta name="color-scheme" content="dark" />
 <link rel="icon" href="assets/peak-a.svg" type="image/svg+xml" />
@@ -54,7 +54,7 @@
     <div>
       <div class="eyebrow">What we built</div>
       <h2>Retrieval, tools, and an honest threshold.</h2>
-      <ul class="checklist"><li>BM25 retrieval over the help centre, with the quoted sentence and a citation chip per reply.</li><li>A rule-based planner that calls order lookup or refund eligibility only when the question needs it.</li><li>Confidence from retrieval score, coverage and tool success — with a visible human hand-off that creates a ticket.</li><li>An evaluation tab with labelled questions, hit@k, tool-match, grounding and escalation checks.</li></ul>
+      <ul class="checklist"><li>BM25 retrieval over the help centre, with the quoted sentence and a citation chip per reply.</li><li>A rule-based planner that calls order lookup or refund eligibility only when the question needs it.</li><li>Confidence from retrieval score, coverage and tool success, with a visible human hand-off that creates a ticket.</li><li>An evaluation tab with labelled questions, hit@k, tool-match, grounding and escalation checks.</li></ul>
     </div>
   </div>
 </section>
@@ -69,20 +69,20 @@
 deterministic pipeline · no network · node:test</pre>
   <div class="case-columns" style="margin-top:26px">
     <div><h3>Stack</h3><div class="row wrap" style="gap:8px;margin-top:10px"><span class="chip">TypeScript</span><span class="chip">Vanilla JS</span></div></div>
-    <div><h3>Security and money</h3><ul class="checklist"><li>Answers are extractive quotes, so every sentence is traceable to a retrieved passage.</li><li>Tools are only called when the intent needs live data; the planner and its arguments are logged.</li><li>The threshold trades deflection for correctness and is displayed next to the answer.</li><li>The evaluation set is small and the README says so — the number is not a general accuracy claim.</li></ul></div>
+    <div><h3>Security and money</h3><ul class="checklist"><li>Answers are extractive quotes, so every sentence is traceable to a retrieved passage.</li><li>Tools are only called when the intent needs live data; the planner and its arguments are logged.</li><li>The threshold trades deflection for correctness and is displayed next to the answer.</li><li>The evaluation set is small and the README says so, the number is not a general accuracy claim.</li></ul></div>
   </div>
 </section>
 
 <section class="section tight">
   <div class="section-head"><div><div class="eyebrow">Screens</div><h2>Product surfaces</h2></div></div>
   <div class="shot-grid">
-    <figure><img src="assets/relay.png" alt="Relay — the working demo" /><figcaption>Relay — the working demo</figcaption></figure>
+    <figure><img src="assets/relay.png" alt="Relay, the working demo" /><figcaption>Relay, the working demo</figcaption></figure>
   </div>
 </section>
 
 <section class="section tight contact-band">
   <div><div class="eyebrow">Similar work</div><h2>Building something in this category?</h2>
-  <p class="page-lede">We can walk you through the architecture, the payment integration and the failure cases on a call — including the parts that were hard.</p>
+  <p class="page-lede">We can walk you through the architecture, the payment integration and the failure cases on a call, including the parts that were hard.</p>
   <div class="row wrap" style="margin-top:18px;gap:12px"><a class="btn primary" href="mailto:hello@arviontech.net">hello@arviontech.net</a><a class="btn" href="company.html">Company profile</a></div></div>
 </section></main>
 

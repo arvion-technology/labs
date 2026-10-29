@@ -71,7 +71,7 @@ export const SCREENS = [
       header: "Book deep cleaning",
       body: [
         { kind: "field", label: "Address", value: "Baneshwor, Kathmandu" },
-        { kind: "slots", items: ["Today 2–4", "Tomorrow 9–11"] },
+        { kind: "slots", items: ["Today 2-4", "Tomorrow 9-11"] },
         { kind: "price", label: "Estimate", value: "NPR 3,200" },
         { kind: "cta", text: "Request worker" },
       ],

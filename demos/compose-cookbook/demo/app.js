@@ -77,7 +77,7 @@ function renderTopology(stack) {
       { label: "Image", render: (service) => el("span", { class: "mono small muted", text: service.image }) },
       { label: "Health", width: "90px", render: (service) => service.healthcheck ? el("span", { class: "badge green", text: "check" }) : el("span", { class: "badge red", text: "none" }) },
       { label: "Ports", width: "180px", render: (service) => el("span", { class: "mono small", text: service.ports.length ? service.ports.join(", ") : "internal only" }) },
-      { label: "Memory", width: "80px", align: "right", render: (service) => el("span", { class: "mono small muted", text: service.memLimit ?? "—" }) },
+      { label: "Memory", width: "80px", align: "right", render: (service) => el("span", { class: "mono small muted", text: service.memLimit ?? ", " }) },
     ],
     rows: stack.services,
   }));

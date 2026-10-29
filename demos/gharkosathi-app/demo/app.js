@@ -1,4 +1,4 @@
-// GharKo Sathi — case-study site.
+// GharKo Sathi, case-study site.
 // Screens, metrics, lifecycle and queue all come from ../src, the modules the
 // tests exercise. This file renders; it does not re-implement the logic.
 import {
@@ -285,7 +285,7 @@ function flowPage(main) {
           return false;
         }
       });
-      if (result.exhausted) jobState.log.push("queue exhausted — user must resolve");
+      if (result.exhausted) jobState.log.push("queue exhausted, user must resolve");
     }
     log.textContent = jobState.log.join("\n");
     renderQueue();
@@ -379,7 +379,7 @@ function render() {
   if (view === "screens") renderScreensPage(main);
   else if (view === "flow") flowPage(main);
   else overviewPage(main);
-  document.title = `${view === "overview" ? "Case study" : view === "screens" ? "Screens" : "Lifecycle"} — GharKo Sathi`;
+  document.title = `${view === "overview" ? "Case study" : view === "screens" ? "Screens" : "Lifecycle"}, GharKo Sathi`;
   window.scrollTo({ top: 0 });
 }
 

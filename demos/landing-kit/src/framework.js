@@ -77,7 +77,7 @@ export const TEMPLATES = [
     vertical: "SaaS",
     palette: "saas",
     file: "templates/saas.html",
-    audience: "Finance leads at 20–200 person companies",
+    audience: "Finance leads at 20-200 person companies",
     pitch: "Close the month without a spreadsheet relay race.",
     mode: "light",
     sections: ["hero", "proof", "problem", "product", "how", "pricing", "objections", "cta"],
@@ -179,7 +179,7 @@ export function validateAll() {
   return TEMPLATES.flatMap((template) => validateTemplate(template));
 }
 
-/** Section counts across the six templates — what the framework page prints. */
+/** Section counts across the six templates, what the framework page prints. */
 export function coverage() {
   return SECTIONS.map((section) => ({
     ...section,

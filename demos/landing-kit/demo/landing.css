@@ -1,5 +1,5 @@
 /* ============================================================================
-   Landing Kit — shared stylesheet for the six templates.
+   Landing Kit, shared stylesheet for the six templates.
    Each template sets its palette on <body data-template="…"> and its mode on
    <html data-theme="…">. Nothing here is per-template except the palette and a
    handful of layout overrides at the bottom.
@@ -361,7 +361,7 @@ html[data-theme="dark"] .lk-theme .moon { display: none; }
 }
 .lk-faq summary::-webkit-details-marker { display: none; }
 .lk-faq summary::after { content: "+"; margin-left: auto; color: var(--lk-accent); font-size: 18px; line-height: 1; }
-.lk-faq details[open] summary::after { content: "–"; }
+.lk-faq details[open] summary::after { content: ", "; }
 .lk-faq details p { margin: 0; padding: 0 18px 18px; font-size: 13.5px; }
 
 /* cta band */

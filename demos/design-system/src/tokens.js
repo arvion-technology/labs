@@ -2,9 +2,9 @@
  * Arvion UI token architecture.
  *
  * Three layers, in this order:
- *   1. primitives  — raw ramps. Never referenced by product code.
- *   2. semantic    — role tokens (text, surface, accent). What components use.
- *   3. component   — not a token layer at all: components read semantic tokens
+ *   1. primitives, raw ramps. Never referenced by product code.
+ *   2. semantic, role tokens (text, surface, accent). What components use.
+ *   3. component, not a token layer at all: components read semantic tokens
  *                    through the `--arv-*` custom properties emitted here.
  *
  * Keeping primitives out of the emitted CSS is deliberate. It stops a product
@@ -274,7 +274,7 @@ export function themeCSS() {
   const lightVars = colorVariables("light");
   const darkBlock = Object.fromEntries(Object.keys(lightVars).map((k) => [k, darkVars[k]]));
   return [
-    "/* Arvion UI tokens — generated from src/tokens.js. MIT licensed. */",
+    "/* Arvion UI tokens, generated from src/tokens.js. MIT licensed. */",
     block(":root", { ...base, ...darkBlock, "color-scheme": "dark" }),
     block('[data-theme="light"]', { ...lightVars, "color-scheme": "light" }),
     "",
