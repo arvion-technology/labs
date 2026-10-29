@@ -1,0 +1,13 @@
+[
+  { "wait": 1400 },
+  { "click": ".main-nav a:nth-child(2)" },
+  { "wait": 1400 },
+  { "type": ["#invoice-search", "priority"] },
+  { "wait": 1200 },
+  { "scroll": 260 },
+  { "wait": 900 },
+  { "eval": "[...document.querySelectorAll('a.table-link')].find(a => a.offsetParent !== null)?.click()" },
+  { "wait": 1600 },
+  { "scroll": 380 },
+  { "wait": 1300 }
+]

@@ -1,0 +1,13 @@
+[
+  { "wait": 1500 },
+  { "hash": "#invoices" },
+  { "wait": 1400 },
+  { "click": "#invoice-table tbody tr" },
+  { "wait": 1500 },
+  { "hash": "#aging" },
+  { "wait": 1400 },
+  { "hash": "#customers" },
+  { "wait": 1200 },
+  { "hash": "#export" },
+  { "wait": 1500 }
+]

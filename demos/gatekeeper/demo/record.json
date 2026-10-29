@@ -1,0 +1,9 @@
+[
+  { "wait": 1400 },
+  { "click": "#preset-overload" },
+  { "wait": 2200 },
+  { "click": "#burst-btn" },
+  { "wait": 1600 },
+  { "click": "#preset-steady" },
+  { "wait": 1800 }
+]

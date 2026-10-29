@@ -6,6 +6,7 @@
   const empty = document.getElementById("no-results");
   let category = "all";
   let look = "all";
+  let lang = "all";
 
   function apply() {
     const q = (input?.value || "").trim().toLowerCase();
@@ -13,8 +14,9 @@
     for (const card of cards) {
       const matchesCategory = category === "all" || card.dataset.category === category;
       const matchesLook = look === "all" || card.dataset.look === look;
+      const matchesLang = lang === "all" || card.dataset.lang === lang;
       const matchesText = !q || card.dataset.search.includes(q);
-      const show = matchesCategory && matchesLook && matchesText;
+      const show = matchesCategory && matchesLook && matchesLang && matchesText;
       card.hidden = !show;
       if (show) visible++;
     }
@@ -29,6 +31,11 @@
   document.querySelectorAll("[data-look-filter]").forEach((b) => b.addEventListener("click", () => {
     look = b.dataset.lookFilter;
     document.querySelectorAll("[data-look-filter]").forEach((x) => x.classList.toggle("active", x === b));
+    apply();
+  }));
+  document.querySelectorAll("[data-lang-filter]").forEach((b) => b.addEventListener("click", () => {
+    lang = b.dataset.langFilter;
+    document.querySelectorAll("[data-lang-filter]").forEach((x) => x.classList.toggle("active", x === b));
     apply();
   }));
 

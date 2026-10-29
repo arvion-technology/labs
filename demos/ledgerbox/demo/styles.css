@@ -1,0 +1,66 @@
+/* Ledgerbox static mirror, additions on top of the shared Arvion stylesheet.
+   The sand theme supplies the tokens; this file only adds the ledger layout. */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.stat-grid.five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.crumb { font-size: 12px; color: var(--muted); }
+.crumb .sep { margin: 0 6px; opacity: 0.5; }
+
+.card-title { color: var(--text); }
+.card-sub { color: var(--muted); }
+
+/* aging bars */
+.aging-list { display: flex; flex-direction: column; gap: 12px; }
+.aging-row-head { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; color: var(--text-2); }
+.aging-row-head .mono { color: var(--text); }
+
+/* recent payments */
+.feed { display: flex; flex-direction: column; }
+.feed-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+.feed-row:last-child { border-bottom: 0; }
+.feed-main { display: flex; flex-direction: column; color: var(--text); }
+.feed-main small { color: var(--muted); font-size: 10.5px; }
+.feed-side { margin-left: auto; color: var(--muted); font-size: 10.5px; font-family: var(--font-mono); }
+
+/* filters and forms */
+.filter-bar { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+.field { display: flex; flex-direction: column; gap: 5px; min-width: 150px; }
+.field.grow { flex: 1; min-width: 240px; }
+.field > span { font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.form { display: flex; flex-direction: column; gap: 12px; }
+
+/* invoice detail */
+.invoice-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 16px; }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.totals { display: grid; grid-template-columns: 1fr auto; gap: 8px 14px; margin: 0; font-size: 13px; }
+.totals dt { color: var(--muted); }
+.totals dd { margin: 0; text-align: right; color: var(--text); font-variant-numeric: tabular-nums; }
+.totals .total { font-weight: 600; font-size: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+.totals .balance { font-weight: 600; color: var(--red); }
+.totals .balance-value { color: var(--red); font-weight: 600; }
+.note { margin-top: 14px; padding: 12px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--line); font-size: 12.5px; color: var(--text-2); }
+
+/* new invoice modal rows */
+.item-row { display: grid; grid-template-columns: minmax(0, 2.4fr) 80px 120px; gap: 8px; margin-bottom: 8px; }
+.modal .field { margin-bottom: 10px; }
+.modal .row-split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.empty { color: var(--muted); font-size: 13px; padding: 10px 0; }
+.empty.good { color: var(--green); }
+.table .zero { opacity: 0.45; }
+
+@media (max-width: 1180px) {
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat-grid.five { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .invoice-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .stat-grid, .stat-grid.five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

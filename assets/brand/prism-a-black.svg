@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Arvion">
+  <path d="M50 6 L94 94 H62 L50 68 L38 94 H6 Z" fill="#14110c"/>
+  <path d="M50 6 L94 94 H62 L50 68 Z" fill="#14110c" opacity=".58"/>
+  <path d="M50 40 L60 62 H40 Z" fill="#f4f1ea"/>
+</svg>
